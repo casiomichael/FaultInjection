@@ -2,20 +2,20 @@
 
 /* SimpleScalar(TM) Tool Suite
  * Copyright (C) 1994-2003 by Todd M. Austin, Ph.D. and SimpleScalar, LLC.
- * All Rights Reserved. 
- * 
+ * All Rights Reserved.
+ *
  * THIS IS A LEGAL DOCUMENT, BY USING SIMPLESCALAR,
  * YOU ARE AGREEING TO THESE TERMS AND CONDITIONS.
- * 
+ *
  * No portion of this work may be used by any commercial entity, or for any
  * commercial purpose, without the prior, written permission of SimpleScalar,
  * LLC (info@simplescalar.com). Nonprofit and noncommercial use is permitted
  * as described below.
- * 
+ *
  * 1. SimpleScalar is provided AS IS, with no warranty of any kind, express
  * or implied. The user of the program accepts full responsibility for the
  * application of the program and the use of any results.
- * 
+ *
  * 2. Nonprofit and noncommercial use is encouraged. SimpleScalar may be
  * downloaded, compiled, executed, copied, and modified solely for nonprofit,
  * educational, noncommercial research, and noncommercial scholarship
@@ -24,13 +24,13 @@
  * solely for nonprofit, educational, noncommercial research, and
  * noncommercial scholarship purposes provided that this notice in its
  * entirety accompanies all copies.
- * 
+ *
  * 3. ALL COMMERCIAL USE, AND ALL USE BY FOR PROFIT ENTITIES, IS EXPRESSLY
  * PROHIBITED WITHOUT A LICENSE FROM SIMPLESCALAR, LLC (info@simplescalar.com).
- * 
+ *
  * 4. No nonprofit user may place any restrictions on the use of this software,
  * including as modified by the user, by any other authorized user.
- * 
+ *
  * 5. Noncommercial and nonprofit users may distribute copies of SimpleScalar
  * in compiled or executable form as set forth in Section 2, provided that
  * either: (A) it is accompanied by the corresponding machine-readable source
@@ -40,11 +40,11 @@
  * must permit verbatim duplication by anyone, or (C) it is distributed by
  * someone who received only the executable form, and is accompanied by a
  * copy of the written offer of source code.
- * 
+ *
  * 6. SimpleScalar was developed by Todd M. Austin, Ph.D. The tool suite is
  * currently maintained by SimpleScalar LLC (info@simplescalar.com). US Mail:
  * 2395 Timbercrest Court, Ann Arbor, MI 48105.
- * 
+ *
  * Copyright (C) 1994-2003 by Todd M. Austin, Ph.D. and SimpleScalar, LLC.
  */
 
@@ -327,6 +327,10 @@ static counter_t sim_num_branches = 0;
 /* total number of branches executed */
 static counter_t sim_total_branches = 0;
 
+/* mkc40: total number of bits that were flipped */
+static counter_t sim_num_flips = 0;
+static counter_t sim_clock_cycles = 0;
+
 /* cycle counter */
 static tick_t sim_cycle = 0;
 
@@ -395,6 +399,22 @@ static struct res_pool *fu_pool = NULL;
 static struct stat_stat_t *pcstat_stats[MAX_PCSTAT_VARS];
 static counter_t pcstat_lastvals[MAX_PCSTAT_VARS];
 static struct stat_stat_t *pcstat_sdists[MAX_PCSTAT_VARS];
+
+/* mkc40: DOING A RANDOM BIT FLIP EVERY 2000 CLOCK CYCLES*/
+int bitFlip(int inputNum, int clockCycle, int valid_instr){
+  //srand(time(0));
+  int randomBit = rand() % 32;
+  printf("randombit is = %d\n",randomBit);
+  int remainder = rand() % 100;
+  printf("remainder is %d\n",remainder);
+  if (remainder < 70 && valid_instr){
+    printf("bit was flipped!\n");
+    sim_num_flips++;
+    return inputNum ^ (1 << randomBit);
+  }
+  else
+    return inputNum;
+}
 
 /* wedge all stat values into a counter_t */
 #define STATVAL(STAT)							\
@@ -573,7 +593,7 @@ dtlb_access_fn(enum mem_cmd cmd,	/* access cmd, Read or Write */
 void
 sim_reg_options(struct opt_odb_t *odb)
 {
-  opt_reg_header(odb, 
+  opt_reg_header(odb,
 "sim-outorder: This simulator implements a very detailed out-of-order issue\n"
 "superscalar processor with a two-level memory system and speculative\n"
 "execution support.  This simulator is a performance simulator, tracking the\n"
@@ -704,7 +724,7 @@ sim_reg_options(struct opt_odb_t *odb)
 	      /* print */TRUE, /* format */NULL);
 
   opt_reg_flag(odb, "-issue:inorder", "run pipeline with in-order issue",
-	       &ruu_inorder_issue, /* default */FALSE,
+	       &ruu_inorder_issue, /* default */TRUE,
 	       /* print */TRUE, /* format */NULL);
 
   opt_reg_flag(odb, "-issue:wrongpath",
@@ -1152,25 +1172,25 @@ sim_check_options(struct opt_odb_t *odb,        /* options database */
   if (res_ialu > MAX_INSTS_PER_CLASS)
     fatal("number of integer ALU's must be <= MAX_INSTS_PER_CLASS");
   fu_config[FU_IALU_INDEX].quantity = res_ialu;
-  
+
   if (res_imult < 1)
     fatal("number of integer multiplier/dividers must be greater than zero");
   if (res_imult > MAX_INSTS_PER_CLASS)
     fatal("number of integer mult/div's must be <= MAX_INSTS_PER_CLASS");
   fu_config[FU_IMULT_INDEX].quantity = res_imult;
-  
+
   if (res_memport < 1)
     fatal("number of memory system ports must be greater than zero");
   if (res_memport > MAX_INSTS_PER_CLASS)
     fatal("number of memory system ports must be <= MAX_INSTS_PER_CLASS");
   fu_config[FU_MEMPORT_INDEX].quantity = res_memport;
-  
+
   if (res_fpalu < 1)
     fatal("number of floating point ALU's must be greater than zero");
   if (res_fpalu > MAX_INSTS_PER_CLASS)
     fatal("number of floating point ALU's must be <= MAX_INSTS_PER_CLASS");
   fu_config[FU_FPALU_INDEX].quantity = res_fpalu;
-  
+
   if (res_fpmult < 1)
     fatal("number of floating point multiplier/dividers must be > zero");
   if (res_fpmult > MAX_INSTS_PER_CLASS)
@@ -1211,6 +1231,11 @@ sim_reg_stats(struct stat_sdb_t *sdb)   /* stats database */
   stat_reg_formula(sdb, "sim_inst_rate",
 		   "simulation speed (in insts/sec)",
 		   "sim_num_insn / sim_elapsed_time", NULL);
+
+  /* mkc40: keeping track of num bit flips */
+  stat_reg_counter(sdb, "sim_num_flips",
+       "total number of bits flipped",
+       &sim_num_flips, 0, NULL);
 
   stat_reg_counter(sdb, "sim_total_insn",
 		   "total number of instructions executed",
@@ -2213,7 +2238,7 @@ ruu_commit(void)
 	  /* invalidate load/store operation instance */
 	  LSQ[LSQ_head].tag++;
           sim_slip += (sim_cycle - LSQ[LSQ_head].slip);
-   
+
 	  /* indicate to pipeline trace that this instruction retired */
 	  ptrace_newstage(LSQ[LSQ_head].ptrace_seq, PST_COMMIT, events);
 	  ptrace_endinst(LSQ[LSQ_head].ptrace_seq);
@@ -2319,7 +2344,7 @@ ruu_recover(int branch_index)			/* index of mis-pred branch */
 	      /* blow away the consuming op list */
 	      LSQ[LSQ_index].odep_list[i] = NULL;
 	    }
-      
+
 	  /* squash this LSQ entry */
 	  LSQ[LSQ_index].tag++;
 
@@ -2339,7 +2364,7 @@ ruu_recover(int branch_index)			/* index of mis-pred branch */
 	  /* blow away the consuming op list */
 	  RUU[RUU_index].odep_list[i] = NULL;
 	}
-      
+
       /* squash this RUU entry */
       RUU[RUU_index].tag++;
 
@@ -2726,6 +2751,7 @@ ruu_issue(void)
 			      if (!spec_mode && !valid_addr)
 				sim_invalid_addrs++;
 
+
 			      /* no! go to the data cache if addr is valid */
 			      if (cache_dl1 && valid_addr)
 				{
@@ -2773,7 +2799,7 @@ ruu_issue(void)
 			  eventq_queue_event(rs, sim_cycle + fu->oplat);
 
 			  /* entered execute stage, indicate in pipe trace */
-			  ptrace_newstage(rs->ptrace_seq, PST_EXECUTE, 
+			  ptrace_newstage(rs->ptrace_seq, PST_EXECUTE,
 					  rs->ea_comp ? PEV_AGEN : 0);
 			}
 
@@ -3705,6 +3731,8 @@ ruu_dispatch(void)
   md_inst_t inst;			/* actual instruction bits */
   enum md_opcode op;			/* decoded opcode enum */
   int out1, out2, in1, in2, in3;	/* output/input register names */
+  int binRC; /* mkc40: DEBUG*/
+  char* operation = NULL;
   md_addr_t target_PC;			/* actual next/target PC address */
   md_addr_t addr;			/* effective address, if load/store */
   struct RUU_station *rs;		/* RUU station being allocated */
@@ -3751,6 +3779,8 @@ ruu_dispatch(void)
       dir_update_ptr = &(fetch_data[fetch_head].dir_update);
       stack_recover_idx = fetch_data[fetch_head].stack_recover_idx;
       pseq = fetch_data[fetch_head].ptrace_seq;
+      /* mkc40: DEBUG */
+      printf("START HERE\n");
 
       /* decode the inst */
       MD_SET_OPCODE(op, inst);
@@ -3781,6 +3811,15 @@ ruu_dispatch(void)
 	  /* one more non-speculative instruction executed */
 	  sim_num_insn++;
 	}
+  /* mkc40: CHECK TO MAKE SURE THIS ISN'T A BOGUS INSTRUCTION, SO WE COUNT NUMBER OF BIT FLIPS THAT ACTUALLY PROPAGATED */
+  printf("REGULAR op is = %d, op_na = %d, op_max = %d \n",rs->op, OP_NA, OP_MAX);
+  int valid_instr;
+  if (op <= OP_NA || op >= OP_MAX || spec_mode){
+    printf("WE HAVE A BOGUS INSTRUCTION\n");
+    valid_instr = 0;
+  }
+  else
+    valid_instr = 1;
 
       /* default effective address (none) and access */
       addr = 0; is_write = FALSE;
@@ -3796,8 +3835,16 @@ ruu_dispatch(void)
 	  /* compute output/input dependencies to out1-2 and in1-3 */	\
 	  out1 = O1; out2 = O2;						\
 	  in1 = I1; in2 = I2; in3 = I3;					\
+    operation = NAME; \
 	  /* execute the instruction */					\
+    /*mkc40: DEBUG*/\
+    printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); \
 	  SYMCAT(OP,_IMPL);						\
+    printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); \
+    binRC = bitFlip((int)GPR(RC), sim_clock_cycles, valid_instr);\
+    printf("values of RC (%d) = %d\n",RC, binRC);\
+    SET_GPR(RC,binRC);\
+    printf("EXECUTING HERE\n"); \
 	  break;
 #define DEFLINK(OP,MSK,NAME,MASK,SHIFT)					\
 	case OP:							\
@@ -3930,6 +3977,15 @@ ruu_dispatch(void)
 	  rs->seq = ++inst_seq;
 	  rs->queued = rs->issued = rs->completed = FALSE;
 	  rs->ptrace_seq = pseq;
+    /*mkc40: DEBUG*/
+    int bruh;
+    printf("the instruction is a %s instruction \n",operation);
+    printf("this instruction uses RA = %d, RB = %d, RC = %d\n",RA,RB,RC);
+    printf("pc has the value %x\n",rs->PC);
+    for (bruh = 0; bruh < 32; bruh++){
+      printf("r%d has the value %d\n",bruh,(int)GPR(bruh));
+    }
+    printf("BREAK\n");
 
 	  /* split ld/st's into two operations: eff addr comp + mem access */
 	  if (MD_OP_FLAGS(op) & F_MEM)
@@ -4277,7 +4333,7 @@ ruu_fetch(void)
 
 	  /* pre-decode instruction, used for bpred stats recording */
 	  MD_SET_OPCODE(op, inst);
-	  
+
 	  /* get the next predicted fetch address; only use branch predictor
 	     result for branches (assumes pre-decode bits); NOTE: returned
 	     value may be 1 if bpred can only predict a direction */
@@ -4528,8 +4584,10 @@ sim_main(void)
 
   /* main simulator loop, NOTE: the pipe stages are traverse in reverse order
      to eliminate this/next state synchronization and relaxation problems */
-  for (;;)
+  int ijk;
+  for (ijk = 0; ijk < 2000; ijk++)
     {
+      sim_clock_cycles++;
       /* RUU/LSQ sanity checks */
       if (RUU_num < LSQ_num)
 	panic("RUU_num < LSQ_num");
@@ -4544,8 +4602,10 @@ sim_main(void)
       /* indicate new cycle in pipetrace */
       ptrace_newcycle(sim_cycle);
 
-      /* commit entries from RUU/LSQ to architected register file */
+       /* commit entries from RUU/LSQ to architected register file */
+      printf("ENTERING RUU COMMIT\n");
       ruu_commit();
+      printf("FINISHING RUU COMMIT\n");
 
       /* service function unit release events */
       ruu_release_fu();
@@ -4554,39 +4614,50 @@ sim_main(void)
 
       /* service result completions, also readies dependent operations */
       /* ==> inserts operations into ready queue --> register deps resolved */
+      printf("ENTERING RUU WRITEBACK\n");
       ruu_writeback();
+      printf("FINISHING RUU WRITEBACK\n");
 
       if (!bugcompat_mode)
-	{
-	  /* try to locate memory operations that are ready to execute */
-	  /* ==> inserts operations into ready queue --> mem deps resolved */
-	  lsq_refresh();
+  {
+    /* try to locate memory operations that are ready to execute */
+    /* ==> inserts operations into ready queue --> mem deps resolved */
+    lsq_refresh();
 
-	  /* issue operations ready to execute from a previous cycle */
-	  /* <== drains ready queue <-- ready operations commence execution */
-	  ruu_issue();
-	}
+    /* issue operations ready to execute from a previous cycle */
+    /* <== drains ready queue <-- ready operations commence execution */
+    printf("ENTERING RUU ISSUE MODE\n");
+    ruu_issue();
+    printf("FINISHING RUU ISSUE MODE\n");
+  }
 
       /* decode and dispatch new operations */
       /* ==> insert ops w/ no deps or all regs ready --> reg deps resolved */
+      printf("ENTERING DISPATCH MODE\n");
       ruu_dispatch();
+      printf("FINISHING DISPATCH MODE\n");
 
       if (bugcompat_mode)
-	{
-	  /* try to locate memory operations that are ready to execute */
-	  /* ==> inserts operations into ready queue --> mem deps resolved */
-	  lsq_refresh();
+  {
+    /* try to locate memory operations that are ready to execute */
+    /* ==> inserts operations into ready queue --> mem deps resolved */
+    lsq_refresh();
 
-	  /* issue operations ready to execute from a previous cycle */
-	  /* <== drains ready queue <-- ready operations commence execution */
-	  ruu_issue();
-	}
+    /* issue operations ready to execute from a previous cycle */
+    /* <== drains ready queue <-- ready operations commence execution */
+    printf("ENTERING RUU ISSUE BUGCOMPAT MODE\n");
+    ruu_issue();
+    printf("FINSIHING RUU ISSUE BUGCOMPAT MODE\n");
+  }
 
       /* call instruction fetch unit if it is not blocked */
-      if (!ruu_fetch_issue_delay)
-	ruu_fetch();
+      if (!ruu_fetch_issue_delay){
+        printf("ENTERING FETCH MODE\n");
+  ruu_fetch();
+        printf("FINISHING FETCH MODE\n");
+}
       else
-	ruu_fetch_issue_delay--;
+  ruu_fetch_issue_delay--;
 
       /* update buffer occupancy stats */
       IFQ_count += fetch_num;
@@ -4598,9 +4669,9 @@ sim_main(void)
 
       /* go to next cycle */
       sim_cycle++;
-
+      printf("FINISHING CYCLE\n");
       /* finish early? */
       if (max_insts && sim_num_insn >= max_insts)
-	return;
+  return;
     }
 }
