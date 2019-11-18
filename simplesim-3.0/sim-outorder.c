@@ -80,6 +80,16 @@
  * pipeline operations.
  */
 
+/*mkc40: DEFINE THE PERCENTAGE FOR FLIPS*/
+#define FLIP_PCT     (0.5 * 10000) // OUT OF 10000
+#define DECODE_PCT   (0.1 * 1000)  // OUT OF 1000
+#define RANDREG_PCT  (0.45 * 1000) 
+#define DESTREG_PCT  (0.45 * 1000)
+#define INJECT_ON    1             // 1 if it is on, 0 if not
+
+FILE* no_injection;
+FILE* with_injection; 
+
 /* simulated registers */
 static struct regs_t regs;
 
@@ -328,8 +338,14 @@ static counter_t sim_num_branches = 0;
 static counter_t sim_total_branches = 0;
 
 /* mkc40: total number of bits that were flipped */
-static counter_t sim_num_flips = 0;
-static counter_t sim_clock_cycles = 0;
+static counter_t sim_num_flips = 0;      // total number of flips done (not all are going to propagate or stick to reg)
+static counter_t sim_decoder_flips = 0;  // flipType 5: flips referring to a part of the instruction being decoded
+static counter_t sim_randreg_flips = 0;  // flipType 4: flips referring to a value in a random register being flipped
+static counter_t sim_rcout_flips = 0;    // flipType 3: flips referring to what is going to be saved in reg RC
+static counter_t bogus_decode_flip = 0;  // number of flips during decoding that led to a bogus instruction
+static counter_t sim_nonspec_faults = 0; // number of faults that were caused by the bit flips that propagated and weren't squashed
+static counter_t sim_r31_flips = 0;      // number of flips that occurred in register 31; theory: 31 has ECC somehow
+
 
 /* cycle counter */
 static tick_t sim_cycle = 0;
@@ -399,22 +415,6 @@ static struct res_pool *fu_pool = NULL;
 static struct stat_stat_t *pcstat_stats[MAX_PCSTAT_VARS];
 static counter_t pcstat_lastvals[MAX_PCSTAT_VARS];
 static struct stat_stat_t *pcstat_sdists[MAX_PCSTAT_VARS];
-
-/* mkc40: DOING A RANDOM BIT FLIP EVERY 2000 CLOCK CYCLES*/
-int bitFlip(int inputNum, int clockCycle, int valid_instr){
-  //srand(time(0));
-  int randomBit = rand() % 32;
-  printf("randombit is = %d\n",randomBit);
-  int remainder = rand() % 100;
-  printf("remainder is %d\n",remainder);
-  if (remainder < 70 && valid_instr){
-    printf("bit was flipped!\n");
-    sim_num_flips++;
-    return inputNum ^ (1 << randomBit);
-  }
-  else
-    return inputNum;
-}
 
 /* wedge all stat values into a counter_t */
 #define STATVAL(STAT)							\
@@ -1236,6 +1236,24 @@ sim_reg_stats(struct stat_sdb_t *sdb)   /* stats database */
   stat_reg_counter(sdb, "sim_num_flips",
        "total number of bits flipped",
        &sim_num_flips, 0, NULL);
+  stat_reg_counter(sdb, "sim_decoder_flips",
+       "flips that involved flipping a bit in the instruction decoded",
+       &sim_decoder_flips, 0, NULL);
+  stat_reg_counter(sdb, "sim_random_reg_flip",
+       "flips that involved flipping a bit in a random register",
+       &sim_randreg_flips, 0, NULL); 
+  stat_reg_counter(sdb, "sim_execute_flip",
+       "flips that involved flipping a bit in a result from an operation saved to destination register",
+       &sim_rcout_flips, 0, NULL);     
+  stat_reg_counter(sdb, "bogus_decode_flip",
+       "flips that involved flipping a bit in an instruction, but became a bogus instruction",
+       &bogus_decode_flip, 0, NULL);
+  stat_reg_counter(sdb, "sim_nonspec_faults",
+       "faults that were caused by the bit flips and weren't squashed; would have propagated, but we take off fatal error",
+       &sim_nonspec_faults, 0, NULL);           
+  stat_reg_counter(sdb, "sim_r31_flips",
+       "flips that occurred in register 31",
+       &sim_r31_flips, 0, NULL);                      
 
   stat_reg_counter(sdb, "sim_total_insn",
 		   "total number of instructions executed",
@@ -3720,6 +3738,66 @@ simoo_reg_obj(struct regs_t *xregs,		/* registers to access */
    implementing in-order issue */
 static struct RS_link last_op = RSLINK_NULL_DATA;
 
+/* mkc40: DOING A RANDOM BIT FLIP GIVEN A PERCENTAGE*/
+static random_bit_flipped ;
+
+int bitFlip(int flip_type, int dest_reg, int valid_instr, int operation){
+  random_bit_flipped = rand() % 32;       // pick a random bit from the 32 bits available
+  //printf("bit flipped will be %d\n",random_bit_flipped);
+  int remainder = rand() % 10000;              // generate a random number to see if we will flip or not
+  srand(time(0));                             // change the seed for the random number for the random register
+  int random_reg_flipped = rand() % 32;       // pick a random register from the 32 available
+  int temp = 0;
+  if (remainder < FLIP_PCT && valid_instr){
+    sim_num_flips++;                          // increment and keep track of how many flips we've done
+    //printf("A BIT WILL BE FLIPPED\n");
+    if (flip_type == 0){
+      sim_decoder_flips++;
+      //printf("WE ARE FLIPPING THE VALUE OF THE DECODED INSTRUCTION\n");
+      temp = operation ^ (1 << random_bit_flipped);
+      return temp;
+    }
+    else if(flip_type == 1){                    // FLIP TYPE = 1, SO WE ARE FLIPPING THE VALUE OF A RANDOM REGISTER
+      sim_randreg_flips++;
+      //printf("WE ARE FLIPPING THE VALUE OF A RANDOM REG\n");
+      if (random_reg_flipped == 31)
+        sim_r31_flips++;
+      temp = (int) GPR(random_reg_flipped) ^ (1 << random_bit_flipped);
+      SET_GPR(random_reg_flipped, temp);
+      return operation;
+    }
+    else if (flip_type == 2){                    // FLIP TYPE = 2, SO WE ARE FLIPPING THE VALUE OF THE DEST REG
+      sim_rcout_flips++;
+      //printf("WE ARE FLIPPING THE VALUE OF THE DEST REG\n");
+      if (dest_reg == 31)
+        sim_r31_flips++;
+      temp = (int) GPR(dest_reg) ^ (1 << random_bit_flipped);
+      SET_GPR(dest_reg, temp);
+      return operation;
+    }
+    else
+      return operation;
+  }
+  else 
+    return operation;
+ }
+
+/*
+int bitFlip(int inputNum, int valid_instr){
+  //srand(time(0));
+  int randomBit = rand() % 32;
+  printf("randombit is = %d\n",randomBit);
+  int remainder = rand() % 100;
+  printf("remainder is %d\n",remainder);
+  if (remainder < 70 && valid_instr){
+    printf("bit was flipped!\n");
+    sim_num_flips++;
+    return inputNum ^ (1 << randomBit);
+  }
+  else
+    return inputNum;
+}*/
+
 /* dispatch instructions from the IFETCH -> DISPATCH queue: instructions are
    first decoded, then they allocated RUU (and LSQ for load/stores) resources
    and input and output dependence chains are updated accordingly */
@@ -3731,7 +3809,7 @@ ruu_dispatch(void)
   md_inst_t inst;			/* actual instruction bits */
   enum md_opcode op;			/* decoded opcode enum */
   int out1, out2, in1, in2, in3;	/* output/input register names */
-  int binRC; /* mkc40: DEBUG*/
+  int flipType, whenRegFlip, new_op; /* mkc40: DEBUG*/
   char* operation = NULL;
   md_addr_t target_PC;			/* actual next/target PC address */
   md_addr_t addr;			/* effective address, if load/store */
@@ -3780,8 +3858,23 @@ ruu_dispatch(void)
       stack_recover_idx = fetch_data[fetch_head].stack_recover_idx;
       pseq = fetch_data[fetch_head].ptrace_seq;
       /* mkc40: DEBUG */
-      printf("START HERE\n");
-
+      //printf("START HERE\n");
+      int type_flip = rand() % 1000;  // 0 = decode flip, 1 = reg flip, 2 = RC val flip
+                                // 0, 1 are pre-execution flips
+                                // 1, 2 are post-execution flips (1 can be both)
+      // DETERMINES WHERE WE'RE GOING TO INJECT FAULT
+      if (type_flip < DECODE_PCT)
+        flipType = 0;
+      else if (type_flip < (DECODE_PCT + RANDREG_PCT) && type_flip >= DECODE_PCT)
+        flipType = 1;
+      else if (type_flip < 1000 && type_flip >= (DECODE_PCT + RANDREG_PCT))
+        flipType = 2;
+      int beforeInst = inst;
+      if (flipType == 0 && INJECT_ON){
+        //printf("inst was %d\n",inst);
+        inst = bitFlip(flipType, 0, 1, inst);  // flipping instruction 
+        //printf("now, inst is %d\n",inst);
+      }
       /* decode the inst */
       MD_SET_OPCODE(op, inst);
 
@@ -3812,10 +3905,12 @@ ruu_dispatch(void)
 	  sim_num_insn++;
 	}
   /* mkc40: CHECK TO MAKE SURE THIS ISN'T A BOGUS INSTRUCTION, SO WE COUNT NUMBER OF BIT FLIPS THAT ACTUALLY PROPAGATED */
-  printf("REGULAR op is = %d, op_na = %d, op_max = %d \n",rs->op, OP_NA, OP_MAX);
+  //printf("REGULAR op is = %d, op_na = %d, op_max = %d \n",rs->op, OP_NA, OP_MAX); // will cause a seg fault sometimes
   int valid_instr;
   if (op <= OP_NA || op >= OP_MAX || spec_mode){
-    printf("WE HAVE A BOGUS INSTRUCTION\n");
+    //printf("WE HAVE A BOGUS INSTRUCTION\n");
+    if (flipType == 0 && beforeInst != inst && INJECT_ON)
+      bogus_decode_flip++;
     valid_instr = 0;
   }
   else
@@ -3826,6 +3921,17 @@ ruu_dispatch(void)
 
       /* set default fault - none */
       fault = md_fault_none;
+
+      /*mkc40: determining if we're going to flip random register before or after execution*/
+      //printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); 
+      whenRegFlip = rand() % 2; // determines whether if it's a register flip, if it'll be before or after execution       
+      //printf("whenRegFlip = %d, flipType = %d\n",whenRegFlip,flipType);
+      //printf("old op = %d\n",op);
+      if (whenRegFlip == 0 && flipType == 1 && INJECT_ON){
+        //printf("BIT FLIP PRE-EXECUTION\n");
+        new_op = bitFlip(flipType, 0/*doesn't really matter what we put because won't be used*/, valid_instr, op);
+      }
+      //printf("new_op = %d\n",new_op);
 
       /* more decoding and execution */
       switch (op)
@@ -3838,13 +3944,14 @@ ruu_dispatch(void)
     operation = NAME; \
 	  /* execute the instruction */					\
     /*mkc40: DEBUG*/\
-    printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); \
+    /*printf("OP is = %d\n", OP);*/ \
 	  SYMCAT(OP,_IMPL);						\
-    printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); \
-    binRC = bitFlip((int)GPR(RC), sim_clock_cycles, valid_instr);\
-    printf("values of RC (%d) = %d\n",RC, binRC);\
-    SET_GPR(RC,binRC);\
-    printf("EXECUTING HERE\n"); \
+    if (((whenRegFlip == 1 && flipType == 1) || flipType == 2) && INJECT_ON){\
+      /*printf("BIT FLIP POST-EXECUTION\n");*/\
+      new_op = bitFlip(flipType, RC, valid_instr, op);\
+    }\
+    /*printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); */\
+    /*printf("EXECUTING HERE\n"); */\
 	  break;
 #define DEFLINK(OP,MSK,NAME,MASK,SHIFT)					\
 	case OP:							\
@@ -3890,9 +3997,11 @@ ruu_dispatch(void)
           /* fflush(stderr); */
         }
 
+        /*mkc40: normally it would crash if there is a fault, but we're going to just keep count*/
       if (fault != md_fault_none)
-	fatal("non-speculative fault (%d) detected @ 0x%08p",
-	      fault, regs.regs_PC);
+        sim_nonspec_faults++;
+	//fatal("non-speculative fault (%d) detected @ 0x%08p",
+	      //fault, regs.regs_PC);
 
       /* update memory access stats */
       if (MD_OP_FLAGS(op) & F_MEM)
@@ -3979,13 +4088,34 @@ ruu_dispatch(void)
 	  rs->ptrace_seq = pseq;
     /*mkc40: DEBUG*/
     int bruh;
-    printf("the instruction is a %s instruction \n",operation);
-    printf("this instruction uses RA = %d, RB = %d, RC = %d\n",RA,RB,RC);
-    printf("pc has the value %x\n",rs->PC);
-    for (bruh = 0; bruh < 32; bruh++){
-      printf("r%d has the value %d\n",bruh,(int)GPR(bruh));
+    //printf("the instruction is a %s instruction \n",operation);
+    //printf("this instruction uses RA = %d, RB = %d, RC = %d\n",RA,RB,RC);
+    //printf("pc has the value %x\n",rs->PC);
+    printf("FOLLOWING REGISTER FILE: \n");
+    if (sim_cycle % 1000 == 0 || sim_cycle == 0){
+      if (INJECT_ON == 0)
+        fprintf(no_injection, "THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);
+      else
+        fprintf(with_injection, "THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);
+    }
+    for (bruh = 0; bruh < 32; bruh+=2){
+      printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+      if (sim_cycle % 1000 == 0 || sim_cycle == 0){
+        if (INJECT_ON == 0)
+          fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+        else
+          fprintf(with_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+      }
     }
     printf("BREAK\n");
+    if (sim_cycle % 1000 == 0 || sim_cycle == 0){
+      if (INJECT_ON == 0)
+        fprintf(no_injection, "BREAK\n");
+      else
+        fprintf(with_injection, "BREAK\n");
+    }  
+    //fclose(no_injection);
+    //fclose(with_injection);
 
 	  /* split ld/st's into two operations: eff addr comp + mem access */
 	  if (MD_OP_FLAGS(op) & F_MEM)
@@ -4476,11 +4606,14 @@ simoo_mstate_obj(FILE *stream,			/* output stream */
   return NULL;
 }
 
-
 /* start simulation, program loaded, processor precise state initialized */
 void
 sim_main(void)
 {
+  if (INJECT_ON == 0)
+    no_injection = fopen("no_injection.txt","w+");
+  else
+    with_injection  = fopen("with_injection.txt","w+");
   /* ignore any floating point exceptions, they may occur on mis-speculated
      execution paths */
   signal(SIGFPE, SIG_IGN);
@@ -4585,9 +4718,8 @@ sim_main(void)
   /* main simulator loop, NOTE: the pipe stages are traverse in reverse order
      to eliminate this/next state synchronization and relaxation problems */
   int ijk;
-  for (ijk = 0; ijk < 2000; ijk++)
+  for (ijk = 0; ijk < 30000; ijk++)
     {
-      sim_clock_cycles++;
       /* RUU/LSQ sanity checks */
       if (RUU_num < LSQ_num)
 	panic("RUU_num < LSQ_num");
@@ -4603,9 +4735,9 @@ sim_main(void)
       ptrace_newcycle(sim_cycle);
 
        /* commit entries from RUU/LSQ to architected register file */
-      printf("ENTERING RUU COMMIT\n");
+      //printf("ENTERING RUU COMMIT\n");
       ruu_commit();
-      printf("FINISHING RUU COMMIT\n");
+      //printf("FINISHING RUU COMMIT\n");
 
       /* service function unit release events */
       ruu_release_fu();
@@ -4614,9 +4746,9 @@ sim_main(void)
 
       /* service result completions, also readies dependent operations */
       /* ==> inserts operations into ready queue --> register deps resolved */
-      printf("ENTERING RUU WRITEBACK\n");
+      //printf("ENTERING RUU WRITEBACK\n");
       ruu_writeback();
-      printf("FINISHING RUU WRITEBACK\n");
+      //printf("FINISHING RUU WRITEBACK\n");
 
       if (!bugcompat_mode)
   {
@@ -4626,16 +4758,16 @@ sim_main(void)
 
     /* issue operations ready to execute from a previous cycle */
     /* <== drains ready queue <-- ready operations commence execution */
-    printf("ENTERING RUU ISSUE MODE\n");
+    //printf("ENTERING RUU ISSUE MODE\n");
     ruu_issue();
-    printf("FINISHING RUU ISSUE MODE\n");
+    //printf("FINISHING RUU ISSUE MODE\n");
   }
 
       /* decode and dispatch new operations */
       /* ==> insert ops w/ no deps or all regs ready --> reg deps resolved */
-      printf("ENTERING DISPATCH MODE\n");
+      //printf("ENTERING DISPATCH MODE\n");
       ruu_dispatch();
-      printf("FINISHING DISPATCH MODE\n");
+      //printf("FINISHING DISPATCH MODE\n");
 
       if (bugcompat_mode)
   {
@@ -4645,16 +4777,16 @@ sim_main(void)
 
     /* issue operations ready to execute from a previous cycle */
     /* <== drains ready queue <-- ready operations commence execution */
-    printf("ENTERING RUU ISSUE BUGCOMPAT MODE\n");
+    //printf("ENTERING RUU ISSUE BUGCOMPAT MODE\n");
     ruu_issue();
-    printf("FINSIHING RUU ISSUE BUGCOMPAT MODE\n");
+    //printf("FINSIHING RUU ISSUE BUGCOMPAT MODE\n");
   }
 
       /* call instruction fetch unit if it is not blocked */
       if (!ruu_fetch_issue_delay){
-        printf("ENTERING FETCH MODE\n");
+        //printf("ENTERING FETCH MODE\n");
   ruu_fetch();
-        printf("FINISHING FETCH MODE\n");
+        //printf("FINISHING FETCH MODE\n");
 }
       else
   ruu_fetch_issue_delay--;
@@ -4669,7 +4801,7 @@ sim_main(void)
 
       /* go to next cycle */
       sim_cycle++;
-      printf("FINISHING CYCLE\n");
+      //printf("FINISHING CYCLE\n");
       /* finish early? */
       if (max_insts && sim_num_insn >= max_insts)
   return;

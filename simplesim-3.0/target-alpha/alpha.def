@@ -1148,8 +1148,6 @@ CONNECT(S8ADDQ_LINK)
 
 #define S8ADDQ_IMPL							\
   {									\
-    printf("S8ADD INSTRUCTION HAPPENING\n"); \
-    printf("gpr being changed is: %d\n",RC); \    
     SET_GPR(RC, (GPR(RA) << 3) + GPR(RB));				\
   }
 DEFINST(S8ADDQ,			0x00,
