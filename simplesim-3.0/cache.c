@@ -524,8 +524,10 @@ cache_access(struct cache_t *cp,	/* cache to access */
   /* access must fit in cache block */
   /* FIXME:
      ((addr + (nbytes - 1)) > ((addr & ~cp->blk_mask) + (cp->bsize - 1))) */
-  if ((addr + nbytes) > ((addr & ~cp->blk_mask) + cp->bsize))
+  if ((addr + nbytes) > ((addr & ~cp->blk_mask) + cp->bsize)){
+    printf("addr + nbytes = %d, other = %d\n",(addr + nbytes), (addr & ~cp->blk_mask) + cp->bsize);
     fatal("cache: access error: access spans block, addr 0x%08x", addr);
+  }
 
   /* permissions are checked on cache misses */
 
