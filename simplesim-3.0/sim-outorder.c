@@ -85,7 +85,7 @@
 #define DECODE_PCT   (0.1 * 1000)  // OUT OF 1000
 #define RANDREG_PCT  (0.45 * 1000) 
 #define DESTREG_PCT  (0.45 * 1000)
-#define INJECT_ON    0             // 1 if it is on, 0 if not
+#define INJECT_ON    1             // 1 if it is on, 0 if not
 #define DEF_CYCLE    10000         // get reg values every 10000 clock cycles
 #define MAX_CYCLE    5000000      // run simulation for 5 million clock cycles
 
@@ -4611,10 +4611,33 @@ simoo_mstate_obj(FILE *stream,			/* output stream */
 void
 sim_main(void)
 {
-  if (INJECT_ON == 0)
-    no_injection = fopen("no_injection.txt","w+");
-  else
-    with_injection  = fopen("with_injection.txt","w+");
+  
+  char filename_ni[50], filename_wi[50];
+  strcpy(filename_ni, "no_injection");
+  strcpy(filename_wi, "with_injection");
+  //time_t current_time;
+  //struct tm * time_info;
+
+  char time_str[128];
+  time_t now;
+  struct tm tm_now;
+  now = time(NULL);
+  localtime_r(&now, &tm_now);
+  strftime(time_str, sizeof(time_str), "_%d_%H_%M.txt", &tm_now);
+/*
+  time(&current_time);
+  time_info = localtime(&current_time);
+
+  strftime(timeString, sizeof(timeString), "%H:%M:%S", time_info);
+  puts(timeString);
+*/
+  if (INJECT_ON == 0){
+
+    no_injection = fopen(strcat(filename_ni,time_str)/*strcat(timeString, filename_ni)*/,"w+");
+  }
+  else{
+    with_injection = fopen(strcat(filename_wi,time_str)/*strcat(timeString, filename_wi)*/,"w+");
+  }
   /* ignore any floating point exceptions, they may occur on mis-speculated
      execution paths */
   signal(SIGFPE, SIG_IGN);
@@ -4751,27 +4774,75 @@ sim_main(void)
       ruu_writeback();
       int bruh;
     if (sim_cycle % DEF_CYCLE == 0 || sim_cycle == 0){
-      printf("sim_cycle = %d\n",sim_cycle);
-      printf("PC VALUE = %x\n",regs.regs_PC);      
-      if (INJECT_ON == 0)
+      if (INJECT_ON == 0){
+        printf("THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);        
         fprintf(no_injection, "THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);
-      else
+        printf("PC VALUE = 0x%016x\n",regs.regs_PC);        
+        fprintf(no_injection,"PC VALUE = 0x%016x\n",regs.regs_PC);         
+      }
+      else{
+        printf("THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);            
         fprintf(with_injection, "THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);
+        printf("PC VALUE = 0x%016x\n",regs.regs_PC);            
+        fprintf(with_injection,"PC VALUE = 0x%016x\n",regs.regs_PC);         
+      }
       for (bruh = 0; bruh < 32; bruh+=2){
         printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-        if (sim_cycle % 1000 == 0 || sim_cycle == 0){
-          if (INJECT_ON == 0)
-            fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-          else
-            fprintf(with_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-        }
+        if (INJECT_ON == 0)
+          fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+        else
+          fprintf(with_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
       }    
-      printf("BREAK\n");  
-      if (INJECT_ON == 0)
-        fprintf(no_injection, "BREAK\n");
-      else
-        fprintf(with_injection, "BREAK\n");      
-    }      
+      
+      if (INJECT_ON == 0){
+        fprintf(no_injection," \n\
+NUMBER OF CYCLES:                     %d\n\
+NUMBER OF INSTRUCTIONS EXECUTED:      %d\n\
+NUMBER OF INSTRUCTIONS COMMITTED:     %d\n\
+NUMBER OF BRANCHES EXECUTED:          %d\n\
+NUMBER OF BRANCHES COMMITTED:         %d\n\
+IPC:                                  %.4f\n\
+CPI:                                  %.4f\n\
+NUMBER OF FLIPS:                      %d\n\
+PERCENT OF FLIPS THAT'S IN DECODER:   %.4f\n\
+PERCENT OF FLIPS THAT'S IN RAND-REG:  %.4f\n\
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  %.4f\n\
+NUMBER OF DECODE FLIPS -> BOGUS INST: %d\n\
+NUMBER OF NON-SPEC FAULTS:            %d\n\
+NUMBER OF $r31 FLIPS:                 %d\n\
+---------------------------------------------------------------------\n",\ 
+sim_cycle, sim_total_insn, sim_num_insn,sim_total_branches, sim_num_branches,\
+sim_cycle == 0 ? 0 : sim_num_insn / (float) sim_cycle, sim_num_insn == 0 ? 0: sim_cycle / (float)sim_num_insn, \
+sim_num_flips, sim_num_flips == 0 ? 0: sim_decoder_flips / (float)sim_num_flips, \
+sim_num_flips == 0 ? 0: sim_randreg_flips / (float)sim_num_flips, sim_num_flips == 0 ? 0: sim_rcout_flips / (float)sim_num_flips,\
+bogus_decode_flip, sim_nonspec_faults, sim_r31_flips);
+      }
+      else{
+        fprintf(with_injection," \n\
+NUMBER OF CYCLES:                     %d\n\
+NUMBER OF INSTRUCTIONS EXECUTED:      %d\n\
+NUMBER OF INSTRUCTIONS COMMITTED:     %d\n\
+NUMBER OF BRANCHES EXECUTED:          %d\n\
+NUMBER OF BRANCHES COMMITTED:         %d\n\
+IPC:                                  %.4f\n\
+CPI:                                  %.4f\n\
+NUMBER OF FLIPS:                      %d\n\
+PERCENT OF FLIPS THAT'S IN DECODER:   %.4f\n\
+PERCENT OF FLIPS THAT'S IN RAND-REG:  %.4f\n\
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  %.4f\n\
+NUMBER OF DECODE FLIPS -> BOGUS INST: %d\n\
+NUMBER OF NON-SPEC FAULTS:            %d\n\
+NUMBER OF $r31 FLIPS:                 %d\n\
+---------------------------------------------------------------------\n",\ 
+sim_cycle, sim_total_insn, sim_num_insn,sim_total_branches, sim_num_branches,\
+sim_cycle == 0 ? 0 : sim_num_insn / (float) sim_cycle, sim_num_insn == 0 ? 0: sim_cycle / (float)sim_num_insn, \
+sim_num_flips, sim_num_flips == 0 ? 0: sim_decoder_flips / (float)sim_num_flips, \
+sim_num_flips == 0 ? 0: sim_randreg_flips / (float)sim_num_flips, sim_num_flips == 0 ? 0: sim_rcout_flips / (float)sim_num_flips,\
+bogus_decode_flip, sim_nonspec_faults, sim_r31_flips);
+      
+      }
+      printf("BREAK\n");
+    }
       //printf("FINISHING RUU WRITEBACK\n");
 
       if (!bugcompat_mode)
