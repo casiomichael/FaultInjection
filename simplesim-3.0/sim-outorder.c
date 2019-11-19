@@ -81,13 +81,13 @@
  */
 
 /*mkc40: DEFINE THE PERCENTAGE FOR FLIPS*/
-#define FLIP_PCT     (0.1 * 10000) // OUT OF 10000
-#define DECODE_PCT   (0.1 * 1000)  // OUT OF 1000
-#define RANDREG_PCT  (0.45 * 1000) 
-#define DESTREG_PCT  (0.45 * 1000)
-#define INJECT_ON    1             // 1 if it is on, 0 if not
-#define DEF_CYCLE    10000         // get reg values every 10000 clock cycles
-#define MAX_CYCLE    5000000      // run simulation for 5 million clock cycles
+static int FLIP_PCT    = 0.3 * 10000;   // OUT OF 10000
+static int DECODE_PCT  =   0 * 1000;    // FOLLOWING ARE OUT OF 1000
+static int RANDREG_PCT =   0 * 1000;
+static int DESTREG_PCT =   1 * 1000;
+static int INJECT_ON   =   1;           // 1 IF ON, 0 IF OFF
+static int DEF_CYCLE   =   10000;       // GETS REG VALUE EVERY 10000 CLOCK CYCLES
+static int MAX_CYCLE   =   5000000;     // RUN SIMULATION FOR 5 MILLION CLOCK CYCLES
 
 FILE* no_injection;
 FILE* with_injection; 
@@ -3746,6 +3746,7 @@ static random_bit_flipped ;
 int bitFlip(int flip_type, int dest_reg, int valid_instr, int operation){
   random_bit_flipped = rand() % 32;       // pick a random bit from the 32 bits available
   //printf("bit flipped will be %d\n",random_bit_flipped);
+  srand(time(NULL));
   int remainder = rand() % 10000;              // generate a random number to see if we will flip or not
   srand(time(0));                             // change the seed for the random number for the random register
   int random_reg_flipped = rand() % 32;       // pick a random register from the 32 available
@@ -3879,6 +3880,7 @@ ruu_dispatch(void)
       }
       /* decode the inst */
       MD_SET_OPCODE(op, inst);
+      //printf("inst = %x\n",inst);
 
       /* compute default next PC */
       regs.regs_NPC = regs.regs_PC + sizeof(md_inst_t);
@@ -4240,12 +4242,12 @@ ruu_dispatch(void)
       if (!spec_mode)
 	{
 #if 0 /* moved above for EIO trace file support */
-	  /* one more non-speculative instruction executed */
-	  sim_num_insn++;
+    /* one more non-speculative instruction executed */
+    sim_num_insn++;
 #endif
 
-	  /* if this is a branching instruction update BTB, i.e., only
-	     non-speculative state is committed into the BTB */
+	  /* if this is a branching instruction update BTB, i.e., onl
+y	     non-speculative state is committed into the BTB */
 	  if (MD_OP_FLAGS(op) & F_CTRL)
 	    {
 	      sim_num_branches++;
@@ -4624,6 +4626,9 @@ sim_main(void)
   now = time(NULL);
   localtime_r(&now, &tm_now);
   strftime(time_str, sizeof(time_str), "_%d_%H_%M.txt", &tm_now);
+
+  char header_str[13];
+  snprintf(header_str, sizeof header_str, "%02d-%03d%03d%03d", FLIP_PCT/100, DECODE_PCT/10, RANDREG_PCT/10, DESTREG_PCT/10);
 /*
   time(&current_time);
   time_info = localtime(&current_time);
@@ -4636,7 +4641,7 @@ sim_main(void)
     no_injection = fopen(strcat(filename_ni,time_str)/*strcat(timeString, filename_ni)*/,"w+");
   }
   else{
-    with_injection = fopen(strcat(filename_wi,time_str)/*strcat(timeString, filename_wi)*/,"w+");
+    with_injection = fopen(strcat(header_str,strcat(filename_wi,time_str))/*strcat(timeString, filename_wi)*/,"w+");
   }
   /* ignore any floating point exceptions, they may occur on mis-speculated
      execution paths */
@@ -4773,14 +4778,14 @@ sim_main(void)
       //printf("ENTERING RUU WRITEBACK\n");
       ruu_writeback();
       int bruh;
-    if (sim_cycle % DEF_CYCLE == 0 || sim_cycle == 0){
-      if (INJECT_ON == 0){
+    if (sim_cycle % DEF_CYCLE == 0 || sim_cycle == 0 || sim_cycle == MAX_CYCLE){
+      if (INJECT_ON == 0){       
         printf("THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);        
         fprintf(no_injection, "THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);
         printf("PC VALUE = 0x%016x\n",regs.regs_PC);        
         fprintf(no_injection,"PC VALUE = 0x%016x\n",regs.regs_PC);         
       }
-      else{
+      else{    
         printf("THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);            
         fprintf(with_injection, "THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);
         printf("PC VALUE = 0x%016x\n",regs.regs_PC);            
@@ -4811,7 +4816,7 @@ NUMBER OF DECODE FLIPS -> BOGUS INST: %d\n\
 NUMBER OF NON-SPEC FAULTS:            %d\n\
 NUMBER OF $r31 FLIPS:                 %d\n\
 ---------------------------------------------------------------------\n",\ 
-sim_cycle, sim_total_insn, sim_num_insn,sim_total_branches, sim_num_branches,\
+sim_cycle,  sim_total_insn, sim_num_insn,sim_total_branches, sim_num_branches,\
 sim_cycle == 0 ? 0 : sim_num_insn / (float) sim_cycle, sim_num_insn == 0 ? 0: sim_cycle / (float)sim_num_insn, \
 sim_num_flips, sim_num_flips == 0 ? 0: sim_decoder_flips / (float)sim_num_flips, \
 sim_num_flips == 0 ? 0: sim_randreg_flips / (float)sim_num_flips, sim_num_flips == 0 ? 0: sim_rcout_flips / (float)sim_num_flips,\
