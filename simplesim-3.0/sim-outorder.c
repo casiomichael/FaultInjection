@@ -81,13 +81,16 @@
  */
 
 /*mkc40: DEFINE THE PERCENTAGE FOR FLIPS*/
-#define FLIP_PCT     (0.1 * 10000) // OUT OF 10000
+#define FLIP_PCT     (0.5 * 10000) // OUT OF 10000
 #define DECODE_PCT   (0.1 * 1000)  // OUT OF 1000
 #define RANDREG_PCT  (0.45 * 1000) 
 #define DESTREG_PCT  (0.45 * 1000)
 #define INJECT_ON    1             // 1 if it is on, 0 if not
+<<<<<<< HEAD
 #define DEF_CYCLE    10000         // get reg values every 10000 clock cycles
 #define MAX_CYCLE    5000000      // run simulation for 5 million clock cycles
+=======
+>>>>>>> parent of 847742f... changed reg-state print location
 
 FILE* no_injection;
 FILE* with_injection; 
@@ -3755,7 +3758,7 @@ int bitFlip(int flip_type, int dest_reg, int valid_instr, int operation){
     //printf("A BIT WILL BE FLIPPED\n");
     if (flip_type == 0){
       sim_decoder_flips++;
-      printf("WE ARE FLIPPING THE VALUE OF THE DECODED INSTRUCTION\n");
+      //printf("WE ARE FLIPPING THE VALUE OF THE DECODED INSTRUCTION\n");
       temp = operation ^ (1 << random_bit_flipped);
       return temp;
     }
@@ -4089,32 +4092,33 @@ ruu_dispatch(void)
 	  rs->queued = rs->issued = rs->completed = FALSE;
 	  rs->ptrace_seq = pseq;
     /*mkc40: DEBUG*/
+    int bruh;
     //printf("the instruction is a %s instruction \n",operation);
     //printf("this instruction uses RA = %d, RB = %d, RC = %d\n",RA,RB,RC);
     //printf("pc has the value %x\n",rs->PC);
-    /*
-    if (sim_cycle % 100000000 == 0 || sim_cycle == 0){
-      printf("sim_cycle = %d\n",sim_cycle);
-      printf("FOLLOWING REGISTER FILE: \n");      
+    printf("FOLLOWING REGISTER FILE: \n");
+    if (sim_cycle % 1000 == 0 || sim_cycle == 0){
       if (INJECT_ON == 0)
         fprintf(no_injection, "THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);
       else
         fprintf(with_injection, "THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);
-      for (bruh = 0; bruh < 32; bruh+=2){
-        printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-        if (sim_cycle % 1000 == 0 || sim_cycle == 0){
-          if (INJECT_ON == 0)
-            fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-          else
-            fprintf(with_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
-        }
-      }    
-      printf("BREAK\n");  
+    }
+    for (bruh = 0; bruh < 32; bruh+=2){
+      printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+      if (sim_cycle % 1000 == 0 || sim_cycle == 0){
+        if (INJECT_ON == 0)
+          fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+        else
+          fprintf(with_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+      }
+    }
+    printf("BREAK\n");
+    if (sim_cycle % 1000 == 0 || sim_cycle == 0){
       if (INJECT_ON == 0)
         fprintf(no_injection, "BREAK\n");
       else
-        fprintf(with_injection, "BREAK\n");      
-    }*/
+        fprintf(with_injection, "BREAK\n");
+    }  
     //fclose(no_injection);
     //fclose(with_injection);
 
@@ -4742,7 +4746,7 @@ sim_main(void)
   /* main simulator loop, NOTE: the pipe stages are traverse in reverse order
      to eliminate this/next state synchronization and relaxation problems */
   int ijk;
-  for (ijk = 0; ijk < MAX_CYCLE; ijk++)
+  for (ijk = 0; ijk < 30000; ijk++)
     {
       /* RUU/LSQ sanity checks */
       if (RUU_num < LSQ_num)
@@ -4772,6 +4776,7 @@ sim_main(void)
       /* ==> inserts operations into ready queue --> register deps resolved */
       //printf("ENTERING RUU WRITEBACK\n");
       ruu_writeback();
+<<<<<<< HEAD
       int bruh;
     if (sim_cycle % DEF_CYCLE == 0 || sim_cycle == 0){
       if (INJECT_ON == 0){
@@ -4843,6 +4848,8 @@ bogus_decode_flip, sim_nonspec_faults, sim_r31_flips);
       }
       printf("BREAK\n");
     }
+=======
+>>>>>>> parent of 847742f... changed reg-state print location
       //printf("FINISHING RUU WRITEBACK\n");
 
       if (!bugcompat_mode)
