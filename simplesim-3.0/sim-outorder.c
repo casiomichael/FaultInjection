@@ -81,16 +81,18 @@
  */
 
 /*mkc40: DEFINE THE PERCENTAGE FOR FLIPS*/
-static int FLIP_PCT    = 0.3 * 10000;   // OUT OF 10000
-static int DECODE_PCT  =   0 * 1000;    // FOLLOWING ARE OUT OF 1000
-static int RANDREG_PCT =   0 * 1000;
-static int DESTREG_PCT =   1 * 1000;
+static long PCT_DENOM   = 1000000000;
+static long FLIP_PCT    = 0.007 * 1000000000;   // OUT OF 1000000000
+static long DECODE_PCT  =   0.5 * 1000000000;    // FOLLOWING ARE OUT OF 1000000000
+static long RANDREG_PCT =   0.25 * 1000000000;
+static long DESTREG_PCT =   0.25 * 1000000000;
 static int INJECT_ON   =   1;           // 1 IF ON, 0 IF OFF
 static int DEF_CYCLE   =   10000;       // GETS REG VALUE EVERY 10000 CLOCK CYCLES
 static int MAX_CYCLE   =   5000000;     // RUN SIMULATION FOR 5 MILLION CLOCK CYCLES
 
 FILE* no_injection;
 FILE* with_injection; 
+FILE* test_file;
 
 /* simulated registers */
 static struct regs_t regs;
@@ -347,7 +349,6 @@ static counter_t sim_rcout_flips = 0;    // flipType 3: flips referring to what 
 static counter_t bogus_decode_flip = 0;  // number of flips during decoding that led to a bogus instruction
 static counter_t sim_nonspec_faults = 0; // number of faults that were caused by the bit flips that propagated and weren't squashed
 static counter_t sim_r31_flips = 0;      // number of flips that occurred in register 31; theory: 31 has ECC somehow
-
 
 /* cycle counter */
 static tick_t sim_cycle = 0;
@@ -3743,12 +3744,22 @@ static struct RS_link last_op = RSLINK_NULL_DATA;
 /* mkc40: DOING A RANDOM BIT FLIP GIVEN A PERCENTAGE*/
 static random_bit_flipped ;
 
+int file_exist(char* filename){
+    /* try to open file to read */
+    FILE *file;
+    if (file = fopen(filename, "r")){
+        fclose(file);
+        return 1;
+    }
+    return 0;
+  }
+
 int bitFlip(int flip_type, int dest_reg, int valid_instr, int operation){
   random_bit_flipped = rand() % 32;       // pick a random bit from the 32 bits available
   //printf("bit flipped will be %d\n",random_bit_flipped);
   srand(time(NULL));
-  int remainder = rand() % 10000;              // generate a random number to see if we will flip or not
-  srand(time(0));                             // change the seed for the random number for the random register
+  long remainder = rand() % PCT_DENOM;              // generate a random number to see if we will flip or not
+  srand(time(NULL));                             // change the seed for the random number for the random register
   int random_reg_flipped = rand() % 32;       // pick a random register from the 32 available
   int temp = 0;
   if (remainder < FLIP_PCT && valid_instr){
@@ -3756,7 +3767,8 @@ int bitFlip(int flip_type, int dest_reg, int valid_instr, int operation){
     //printf("A BIT WILL BE FLIPPED\n");
     if (flip_type == 0){
       sim_decoder_flips++;
-      printf("WE ARE FLIPPING THE VALUE OF THE DECODED INSTRUCTION\n");
+      random_bit_flipped = rand() % 27;
+      //printf("WE ARE FLIPPING THE VALUE OF THE DECODED INSTRUCTION\n");
       temp = operation ^ (1 << random_bit_flipped);
       return temp;
     }
@@ -3862,7 +3874,8 @@ ruu_dispatch(void)
       pseq = fetch_data[fetch_head].ptrace_seq;
       /* mkc40: DEBUG */
       //printf("START HERE\n");
-      int type_flip = rand() % 1000;  // 0 = decode flip, 1 = reg flip, 2 = RC val flip
+      srand(time(NULL));
+      int type_flip = rand() % PCT_DENOM;  // 0 = decode flip, 1 = reg flip, 2 = RC val flip
                                 // 0, 1 are pre-execution flips
                                 // 1, 2 are post-execution flips (1 can be both)
       // DETERMINES WHERE WE'RE GOING TO INJECT FAULT
@@ -3870,7 +3883,7 @@ ruu_dispatch(void)
         flipType = 0;
       else if (type_flip < (DECODE_PCT + RANDREG_PCT) && type_flip >= DECODE_PCT)
         flipType = 1;
-      else if (type_flip < 1000 && type_flip >= (DECODE_PCT + RANDREG_PCT))
+      else if (type_flip < PCT_DENOM && type_flip >= (DECODE_PCT + RANDREG_PCT))
         flipType = 2;
       int beforeInst = inst;
       if (flipType == 0 && INJECT_ON){
@@ -3928,6 +3941,7 @@ ruu_dispatch(void)
 
       /*mkc40: determining if we're going to flip random register before or after execution*/
       //printf("values of RA (%d) = %d, RB (%d) = %d, RC (%d) = %d\n",RA, (int)GPR(RA), RB, (int)GPR(RB), RC, (int)GPR(RC)); 
+      srand(time(NULL));
       whenRegFlip = rand() % 2; // determines whether if it's a register flip, if it'll be before or after execution       
       //printf("whenRegFlip = %d, flipType = %d\n",whenRegFlip,flipType);
       //printf("old op = %d\n",op);
@@ -4547,7 +4561,7 @@ simoo_mstate_obj(FILE *stream,			/* output stream */
 "    mstate eventq - dump contents of event queue\n"
 "    mstate readyq - dump contents of ready instruction queue\n"
 "    mstate cv     - dump contents of the register create vector\n"
-"    mstate rspec  - dump contents of speculative regs\n"
+"    mstate rspec  - dump contents of speculative ergs\n"
 "    mstate mspec  - dump contents of speculative memory\n"
 "    mstate fetch  - dump contents of fetch stage registers and fetch queue\n"
 "\n"
@@ -4613,8 +4627,7 @@ simoo_mstate_obj(FILE *stream,			/* output stream */
 void
 sim_main(void)
 {
-  
-  char filename_ni[50], filename_wi[50];
+  char filename_ni[50], filename_wi[50], header_filename[200], final_filename[200];
   strcpy(filename_ni, "no_injection");
   strcpy(filename_wi, "with_injection");
   //time_t current_time;
@@ -4627,8 +4640,30 @@ sim_main(void)
   localtime_r(&now, &tm_now);
   strftime(time_str, sizeof(time_str), "_%d_%H_%M.txt", &tm_now);
 
-  char header_str[13];
-  snprintf(header_str, sizeof header_str, "%02d-%03d%03d%03d", FLIP_PCT/100, DECODE_PCT/10, RANDREG_PCT/10, DESTREG_PCT/10);
+  char header_str[200];
+  snprintf(header_str, sizeof header_str, "%02d-%03d%03d%03d", FLIP_PCT/1000000, DECODE_PCT/10000000, RANDREG_PCT/10000000, DESTREG_PCT/10000000);
+
+  strcpy(header_filename,header_str);
+  strcat(header_filename,filename_wi);
+  printf("buffer filename before loop = %s\n",header_filename);
+  char file_count_str[10];
+  int file_count = 0;
+  for (;;){
+    char buffer_filename[200];
+    strcpy(buffer_filename,header_filename);
+    snprintf(file_count_str, sizeof file_count_str, "_%04d.txt", file_count);\
+    strcat(buffer_filename,file_count_str);
+    if (file_exist(buffer_filename)){
+      file_count++;
+    }
+    else{
+      strcpy(final_filename,buffer_filename);
+      printf("final filename = %s\n",final_filename);
+      printf("final file count = %s\n",file_count_str);
+      break;
+    }
+  }
+
 /*
   time(&current_time);
   time_info = localtime(&current_time);
@@ -4641,7 +4676,7 @@ sim_main(void)
     no_injection = fopen(strcat(filename_ni,time_str)/*strcat(timeString, filename_ni)*/,"w+");
   }
   else{
-    with_injection = fopen(strcat(header_str,strcat(filename_wi,time_str))/*strcat(timeString, filename_wi)*/,"w+");
+    with_injection = fopen(final_filename/*strcat(header_str,strcat(filename_wi,file_count_str))*//*strcat(timeString, filename_wi)*/,"w+");
   }
   /* ignore any floating point exceptions, they may occur on mis-speculated
      execution paths */
@@ -4780,19 +4815,19 @@ sim_main(void)
       int bruh;
     if (sim_cycle % DEF_CYCLE == 0 || sim_cycle == 0 || sim_cycle == MAX_CYCLE){
       if (INJECT_ON == 0){       
-        printf("THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);        
+        //printf("THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);        
         fprintf(no_injection, "THIS IS THE REGISTER FILE FOR NO INJECTION AT CYCLE %d\n",sim_cycle);
-        printf("PC VALUE = 0x%016x\n",regs.regs_PC);        
+        //printf("PC VALUE = 0x%016x\n",regs.regs_PC);        
         fprintf(no_injection,"PC VALUE = 0x%016x\n",regs.regs_PC);         
       }
       else{    
-        printf("THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);            
+        //printf("THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);            
         fprintf(with_injection, "THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE %d\n",sim_cycle);
-        printf("PC VALUE = 0x%016x\n",regs.regs_PC);            
+        //printf("PC VALUE = 0x%016x\n",regs.regs_PC);            
         fprintf(with_injection,"PC VALUE = 0x%016x\n",regs.regs_PC);         
       }
       for (bruh = 0; bruh < 32; bruh+=2){
-        printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
+        //printf("r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
         if (INJECT_ON == 0)
           fprintf(no_injection, "r%02d = %12d,    r%02d = %12d\n",bruh,(int)GPR(bruh), bruh+1, (int)GPR(bruh+1));
         else
@@ -4846,7 +4881,7 @@ sim_num_flips == 0 ? 0: sim_randreg_flips / (float)sim_num_flips, sim_num_flips 
 bogus_decode_flip, sim_nonspec_faults, sim_r31_flips);
       
       }
-      printf("BREAK\n");
+      //printf("BREAK\n");
     }
       //printf("FINISHING RUU WRITEBACK\n");
 
