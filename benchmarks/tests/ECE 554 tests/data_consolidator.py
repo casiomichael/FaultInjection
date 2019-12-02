@@ -1,5 +1,5 @@
 import json
-import xlrd
+import xlwt
 from os import listdir
 from os.path import isfile, join
 import copy
@@ -29,13 +29,41 @@ class folder_manager():
 			self.file_groups[prefix] = l
 
 	def avg_all_stats(self):
-
+		wb = xlwt.Workbook(encoding = 'ascii')
+		sheet = wb.add_sheet('My Worksheet')
 		for index, prefix in enumerate(self.file_groups.keys()):
-			if index == 0:
-				# Initialize Excel Sheet
-			else:
-				# Add Values to it. 
 			avged_stats = self.avg_stats_in_group(prefix)
+			if index == 0:
+				sheet = self.initializeSheet(avged_stats, sheet)
+			sheet = self.addValues(index+1, prefix, avged_stats, sheet)	
+		print("".join(self.folder_fp.split("/")) + ".xls")
+		wb.save("".join(self.folder_fp.split("/")) + ".xls")
+
+	def addValues(self, row, prefix, avged_stats, sheet):
+		sheet.write(row, 0, prefix[0:3])
+		sheet.write(row, 1, prefix[3:6])
+		sheet.write(row, 2, prefix[6:9])
+		sheet.write(row, 3, prefix[9:12])
+		offset = 4
+		if (self.is_ruu):
+			sheet.write(row, 4, prefix[12:])
+			offset = 5
+		for count, key in enumerate(avged_stats.keys()):
+			sheet.write(row, count + offset, label = str(avged_stats[key]))
+		return sheet
+
+	def initializeSheet(self, avged_stats, sheet):
+		sheet.write(0, 0 , 'label1')
+		sheet.write(0, 1 , 'label2')
+		sheet.write(0, 2 , 'label3')
+		sheet.write(0, 3 , 'label4')
+		offset = 4
+		if self.is_ruu:
+			offset = 5
+			sheet.write(0, 4, label = 'ruu')
+		for count, key in enumerate(avged_stats.keys()):
+			sheet.write(0, count + offset , label = key)
+		return sheet
 
 
 
@@ -158,8 +186,20 @@ class dict_utils():
 		for keys,values in self.d.items():
 			print(keys + " " + str(values))
 
-fm = folder_manager("inorder/flip_percentage_tests")
-fm.avg_all_stats()
+# ONLY RUN ONE OF THESE FUNCTIONS AT A TIME. 
+
+# fm = folder_manager("inorder/flip_percentage_tests")
+# fm.avg_all_stats()
+
+# fm1 = folder_manager("inorder/ruu_size_tests")
+# fm1.avg_all_stats()
+
+# fm2 = folder_manager("outorder/flip_percentage_tests")
+# fm2.avg_all_stats()
+
+fm3 = folder_manager("outorder/ruu_size_tests")
+fm3.avg_all_stats()
+
 
 
 
