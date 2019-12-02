@@ -1,0 +1,74 @@
+[
+	{
+		"prefix": "THIS IS THE REGISTER FILE FOR",
+		"info_type": "general"
+	},
+	{
+		"prefix": "PC VALUE",
+		"info_type": "general"
+	},
+	{
+		"prefix": "r",
+		"info_type": "reg_data"
+	},
+	{
+		"prefix": "NUMBER OF CYCLES:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF INSTRUCTIONS EXECUTED",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF INSTRUCTIONS COMMITTED:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF BRANCHES EXECUTED:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF BRANCHES COMMITTED:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "IPC",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "CPI",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF FLIPS:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "PERCENT OF FLIPS THAT'S IN DECODER:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "PERCENT OF FLIPS THAT'S IN RAND-REG:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "PERCENT OF FLIPS THAT'S IN DEST-VAL:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF DECODE FLIPS -> BOGUS INST:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF NON-SPEC FAULTS:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "NUMBER OF $r31 FLIPS:",
+		"info_type": "stats"
+	},
+	{
+		"prefix": "----------",
+		"info_type": "end_of_print"
+	}
+]
