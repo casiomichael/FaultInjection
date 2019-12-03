@@ -12,45 +12,46 @@ run_test(){
 		cache_spans_block=0
 		inv_syscall=0
 		misc_error=0
-		list_faults=()
+		list_faults=(2 8 10 33 35 43 53 68 80 97 98 99)
 		percent_flip=$(echo $4 | cut -c1-2)
 		decode_flip=$(echo $4 | cut -c3-5)
 		reg_flip=$(echo $4 | cut -c6-8)
 		alu_flip=$(echo $4 | cut -c9-11)
 		code=$(echo $1 | cut -c4-6)
 
-		prefix="$percent_flip-`printf %03d $decode_flip``printf %03d $reg_flip``printf %03d $alu_flip`with_injection_"
+		prefix="$percent_flip-$decode_flip$reg_flip${alu_flip}with_injection_"
+		echo "prefix is $prefix"
 
-		until [ $counter == 100 ]; do
-			./sim-outorder-$1 -ruu:size $2 -issue:inorder $3 cc1.alpha -O 1stmt.i
-			status=$?
-			if [ $status == 0 ]; then
-				((success++))
-			elif [ $status == 139 ]; then
-				((segfault++))
-				list_faults+=($counter)
-			elif [ $status == 1 ]; then
-				((cache_spans_block++))
-				list_faults+=($counter)
-			elif [ $status == 6 ]; then
-				((inv_syscall++))
-				list_faults+=($counter)
-			else
-				((misc_error++))
-				list_faults+=($counter)
-			fi
-			((counter++))
-		done
+		# until [ $counter == 100 ]; do
+		# 	./sim-outorder-$1 -ruu:size $2 -issue:inorder $3 cc1.alpha -O 1stmt.i
+		# 	status=$?
+		# 	if [ $status == 0 ]; then
+		# 		((success++))
+		# 	elif [ $status == 139 ]; then
+		# 		((segfault++))
+		# 		list_faults+=($counter)
+		# 	elif [ $status == 1 ]; then
+		# 		((cache_spans_block++))
+		# 		list_faults+=($counter)
+		# 	elif [ $status == 6 ]; then
+		# 		((inv_syscall++))
+		# 		list_faults+=($counter)
+		# 	else
+		# 		((misc_error++))
+		# 		list_faults+=($counter)
+		# 	fi
+		# 	((counter++))
+		# done
 	fi
 
-	echo "Ran $counter tests and all done" >> log$2-$code.txt
-	echo "Successes = $success" >> log$2-$code.txt
-	echo "Segfaults = $segfault" >> log$2-$code.txt
-	echo "Cache Access Spans Block = $cache_spans_block" >> log$2-$code.txt
-	echo "Invalid Syscalls = $inv_syscall" >> log$2-$code.txt
-	echo "Misc. Errors = $misc_error" >> log$2-$code.txt
-	echo "${list_faults[@]}" >> log$2-$code.txt
-	echo "-------------------------" >> log$2-$code.txt
+	# echo "Ran $counter tests and all done" >> log$2-$code.txt
+	# echo "Successes = $success" >> log$2-$code.txt
+	# echo "Segfaults = $segfault" >> log$2-$code.txt
+	# echo "Cache Access Spans Block = $cache_spans_block" >> log$2-$code.txt
+	# echo "Invalid Syscalls = $inv_syscall" >> log$2-$code.txt
+	# echo "Misc. Errors = $misc_error" >> log$2-$code.txt
+	# echo "${list_faults[@]}" >> log$2-$code.txt
+	# echo "-------------------------" >> log$2-$code.txt
 
 	for ints in "${list_faults[@]}"
 	do
