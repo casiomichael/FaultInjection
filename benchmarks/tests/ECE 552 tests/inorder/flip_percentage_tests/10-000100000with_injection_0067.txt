@@ -1,0 +1,3196 @@
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 0
+PC VALUE = 0x0000000020025f6c
+r00 =            0,    r01 =            0
+r02 =            0,    r03 =            0
+r04 =            0,    r05 =            0
+r06 =            0,    r07 =            0
+r08 =            0,    r09 =            0
+r10 =            0,    r11 =            0
+r12 =            0,    r13 =            0
+r14 =            0,    r15 =            0
+r16 =            3,    r17 =    536440840
+r18 =            0,    r19 =            0
+r20 =            0,    r21 =            0
+r22 =            0,    r23 =            0
+r24 =            0,    r25 =            0
+r26 =            0,    r27 =            0
+r28 =            0,    r29 =   1073861392
+r30 =    536440832,    r31 =            0
+ 
+NUMBER OF CYCLES:                     0
+NUMBER OF INSTRUCTIONS EXECUTED:      0
+NUMBER OF INSTRUCTIONS COMMITTED:     0
+NUMBER OF BRANCHES EXECUTED:          0
+NUMBER OF BRANCHES COMMITTED:         0
+IPC:                                  0.0000
+CPI:                                  0.0000
+NUMBER OF FLIPS:                      0
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  0.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 10000
+PC VALUE = 0x00000000201012e8
+r00 =            1,    r01 =            1
+r02 =   1073990696,    r03 =   1073804104
+r04 =            0,    r05 =          249
+r06 =           61,    r07 =   1073804112
+r08 =           92,    r09 =   1073990688
+r10 =   1073990720,    r11 =            1
+r12 =   1073884144,    r13 =    536440864
+r14 =            1,    r15 =            3
+r16 =            0,    r17 =           29
+r18 =           60,    r19 =           -2
+r20 =   2147483646,    r21 =           -3
+r22 =            1,    r23 =            1
+r24 =           76,    r25 =    536441136
+r26 =    537202608,    r27 =    538351552
+r28 =   1073926928,    r29 =   1073861392
+r30 =    536440624,    r31 =            0
+ 
+NUMBER OF CYCLES:                     10000
+NUMBER OF INSTRUCTIONS EXECUTED:      4792
+NUMBER OF INSTRUCTIONS COMMITTED:     4640
+NUMBER OF BRANCHES EXECUTED:          748
+NUMBER OF BRANCHES COMMITTED:         732
+IPC:                                  0.4640
+CPI:                                  2.1552
+NUMBER OF FLIPS:                      4640
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 20000
+PC VALUE = 0x000000002010193c
+r00 =            1,    r01 =            2
+r02 =            0,    r03 =            0
+r04 =            0,    r05 =   1073938912
+r06 =            3,    r07 =   1073990912
+r08 =            0,    r09 =            0
+r10 =            0,    r11 =            4
+r12 =            3,    r13 =    536440864
+r14 =            1,    r15 =            3
+r16 =            2,    r17 =            0
+r18 =            1,    r19 =   1073938904
+r20 =   1073990880,    r21 =            1
+r22 =   1073990864,    r23 =   1073938900
+r24 =            1,    r25 =   1073938848
+r26 =    537202608,    r27 =   1073938904
+r28 =   1073926928,    r29 =   1073861392
+r30 =    536440624,    r31 =            0
+ 
+NUMBER OF CYCLES:                     20000
+NUMBER OF INSTRUCTIONS EXECUTED:      14587
+NUMBER OF INSTRUCTIONS COMMITTED:     14228
+NUMBER OF BRANCHES EXECUTED:          2179
+NUMBER OF BRANCHES COMMITTED:         2119
+IPC:                                  0.7114
+CPI:                                  1.4057
+NUMBER OF FLIPS:                      14228
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 30000
+PC VALUE = 0x0000000020162924
+r00 =           -1,    r01 =   1328349281
+r02 =   1869506093,    r03 =            5
+r04 =            1,    r05 =            0
+r06 =   -536441149,    r07 =       464156
+r08 =           13,    r09 =    536441149
+r10 =   1073749712,    r11 =            1
+r12 =   1073774536,    r13 =    536440856
+r14 =            2,    r15 =   1073779712
+r16 =    536441149,    r17 =   1073750152
+r18 =            0,    r19 =            0
+r20 =   1073990928,    r21 =   1935762989
+r22 =           -1,    r23 =            0
+r24 =            0,    r25 =   1073938848
+r26 =    537064768,    r27 =    538339680
+r28 =   1073926928,    r29 =   1073861392
+r30 =    536440640,    r31 =            0
+ 
+NUMBER OF CYCLES:                     30000
+NUMBER OF INSTRUCTIONS EXECUTED:      22560
+NUMBER OF INSTRUCTIONS COMMITTED:     21891
+NUMBER OF BRANCHES EXECUTED:          3692
+NUMBER OF BRANCHES COMMITTED:         3572
+IPC:                                  0.7297
+CPI:                                  1.3704
+NUMBER OF FLIPS:                      21891
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 40000
+PC VALUE = 0x0000000020166c24
+r00 =   1073917072,    r01 =            0
+r02 =   1074023360,    r03 =            0
+r04 =         5952,    r05 =            8
+r06 =            0,    r07 =           -8
+r08 =   1074027416,    r09 =   1073925240
+r10 =   1073956328,    r11 =   1073956504
+r12 =   1073956416,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =   1073919120,    r17 =            0
+r18 =         8072,    r19 =   1073926928
+r20 =   1073926928,    r21 =   1074023360
+r22 =   1073926928,    r23 =   1073926928
+r24 =   1073926928,    r25 =         4096
+r26 =    537208344,    r27 =    538333576
+r28 =   1073926928,    r29 =   1073861392
+r30 =    536440576,    r31 =            0
+ 
+NUMBER OF CYCLES:                     40000
+NUMBER OF INSTRUCTIONS EXECUTED:      31217
+NUMBER OF INSTRUCTIONS COMMITTED:     30402
+NUMBER OF BRANCHES EXECUTED:          5094
+NUMBER OF BRANCHES COMMITTED:         4962
+IPC:                                  0.7600
+CPI:                                  1.3157
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 50000
+PC VALUE = 0x0000000020053f5c
+r00 =            0,    r01 =   1074019376
+r02 =           88,    r03 =   1074019288
+r04 =         2024,    r05 =   1073917072
+r06 =            7,    r07 =   1074019080
+r08 =           -8,    r09 =            1
+r10 =   1073956328,    r11 =          120
+r12 =           88,    r13 =   1073923968
+r14 =            0,    r15 =   1073926928
+r16 =   1074023152,    r17 =   1074023152
+r18 =           64,    r19 =            0
+r20 =   1073956328,    r21 =           -1
+r22 =   1074019188,    r23 =           11
+r24 =   1073953908,    r25 =           -2
+r26 =    537217428,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     50000
+NUMBER OF INSTRUCTIONS EXECUTED:      37078
+NUMBER OF INSTRUCTIONS COMMITTED:     36150
+NUMBER OF BRANCHES EXECUTED:          6013
+NUMBER OF BRANCHES COMMITTED:         5868
+IPC:                                  0.7230
+CPI:                                  1.3831
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 60000
+PC VALUE = 0x0000000020054684
+r00 =   1073874843,    r01 =          111
+r02 =   1868790114,    r03 =          101
+r04 =   1074021424,    r05 =            7
+r06 =            0,    r07 =            7
+r08 =            0,    r09 =   1073874840
+r10 =   1073874680,    r11 =   1073747176
+r12 =   1073907280,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =          119,    r17 =   1074023152
+r18 =            3,    r19 =   1074021432
+r20 =            0,    r21 =           -1
+r22 =   1074021332,    r23 =           11
+r24 =   1073953908,    r25 =           -2
+r26 =    537046688,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     60000
+NUMBER OF INSTRUCTIONS EXECUTED:      45625
+NUMBER OF INSTRUCTIONS COMMITTED:     44572
+NUMBER OF BRANCHES EXECUTED:          7176
+NUMBER OF BRANCHES COMMITTED:         7031
+IPC:                                  0.7429
+CPI:                                  1.3461
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 70000
+PC VALUE = 0x00000000200a624c
+r00 =   1074021592,    r01 =   1074021608
+r02 =           23,    r03 =   1074021592
+r04 =         -126,    r05 =           60
+r06 =           47,    r07 =            0
+r08 =           47,    r09 =   1073955624
+r10 =          -61,    r11 =           16
+r12 =   1073926928,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            7,    r17 =            0
+r18 =            4,    r19 =            1
+r20 =   1073795648,    r21 =            4
+r22 =          264,    r23 =            0
+r24 =         1000,    r25 =           -2
+r26 =    537588428,    r27 =            4
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440496,    r31 =            0
+ 
+NUMBER OF CYCLES:                     70000
+NUMBER OF INSTRUCTIONS EXECUTED:      51989
+NUMBER OF INSTRUCTIONS COMMITTED:     50876
+NUMBER OF BRANCHES EXECUTED:          8243
+NUMBER OF BRANCHES COMMITTED:         8093
+IPC:                                  0.7268
+CPI:                                  1.3759
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 80000
+PC VALUE = 0x00000000200ab010
+r00 =   1074022568,    r01 =    536440472
+r02 =            0,    r03 =           16
+r04 =           24,    r05 =           -1
+r06 =           47,    r07 =            0
+r08 =           47,    r09 =   1073955624
+r10 =   1073926928,    r11 =   1073936936
+r12 =   1073926928,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =    536440480,    r17 =            0
+r18 =            1,    r19 =   1074036216
+r20 =            0,    r21 =            9
+r22 =            0,    r23 =   1073823152
+r24 =            0,    r25 =         4096
+r26 =    537588512,    r27 =    538333576
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     80000
+NUMBER OF INSTRUCTIONS EXECUTED:      59409
+NUMBER OF INSTRUCTIONS COMMITTED:     58286
+NUMBER OF BRANCHES EXECUTED:          8816
+NUMBER OF BRANCHES COMMITTED:         8665
+IPC:                                  0.7286
+CPI:                                  1.3725
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 90000
+PC VALUE = 0x00000000200b18fc
+r00 =    536440424,    r01 =            0
+r02 =            9,    r03 =            0
+r04 =            1,    r05 =    536440412
+r06 =    536440412,    r07 =            0
+r08 =            0,    r09 =   1073891544
+r10 =   1073926928,    r11 =   1073891272
+r12 =           80,    r13 =            0
+r14 =            0,    r15 =            1
+r16 =    536440424,    r17 =    536440432
+r18 =            0,    r19 =            0
+r20 =   1074029168,    r21 =           49
+r22 =            0,    r23 =            0
+r24 =            0,    r25 =            0
+r26 =    537616332,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440320,    r31 =            0
+ 
+NUMBER OF CYCLES:                     90000
+NUMBER OF INSTRUCTIONS EXECUTED:      66553
+NUMBER OF INSTRUCTIONS COMMITTED:     65279
+NUMBER OF BRANCHES EXECUTED:          9450
+NUMBER OF BRANCHES COMMITTED:         9281
+IPC:                                  0.7253
+CPI:                                  1.3787
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 100000
+PC VALUE = 0x00000000200b14f0
+r00 =           -3,    r01 =            0
+r02 =            2,    r03 =            0
+r04 =            1,    r05 =            0
+r06 =        32768,    r07 =            1
+r08 =            1,    r09 =        16384
+r10 =    536440436,    r11 =     67108864
+r12 =           80,    r13 =           53
+r14 =            0,    r15 =     67108864
+r16 =    536440448,    r17 =            0
+r18 =            2,    r19 =            0
+r20 =            0,    r21 =    536440432
+r22 =            4,    r23 =            0
+r24 =    536440448,    r25 =    537609152
+r26 =    537612016,    r27 =    536440512
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440288,    r31 =            0
+ 
+NUMBER OF CYCLES:                     100000
+NUMBER OF INSTRUCTIONS EXECUTED:      77614
+NUMBER OF INSTRUCTIONS COMMITTED:     76152
+NUMBER OF BRANCHES EXECUTED:          10464
+NUMBER OF BRANCHES COMMITTED:         10268
+IPC:                                  0.7615
+CPI:                                  1.3132
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 110000
+PC VALUE = 0x00000000200af4c8
+r00 =   1074021536,    r01 =            0
+r02 =       720944,    r03 =           48
+r04 =       720896,    r05 =   1073795660
+r06 =   1073958992,    r07 =            0
+r08 =           48,    r09 =   1073955624
+r10 =   1073958904,    r11 =            0
+r12 =           12,    r13 =   1073795616
+r14 =   1074032688,    r15 =   1073906824
+r16 =   1074032712,    r17 =    536440592
+r18 =            0,    r19 =            2
+r20 =        49136,    r21 =            0
+r22 =            0,    r23 =            0
+r24 =    536440464,    r25 =    536440492
+r26 =    537588896,    r27 =            0
+r28 =    537616472,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     110000
+NUMBER OF INSTRUCTIONS EXECUTED:      89358
+NUMBER OF INSTRUCTIONS COMMITTED:     87737
+NUMBER OF BRANCHES EXECUTED:          11581
+NUMBER OF BRANCHES COMMITTED:         11369
+IPC:                                  0.7976
+CPI:                                  1.2537
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 120000
+PC VALUE = 0x0000000020053fb8
+r00 =   1074033768,    r01 =   1074033800
+r02 =           32,    r03 =   1074033768
+r04 =          224,    r05 =   1073926928
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =           26
+r10 =   1073956328,    r11 =           99
+r12 =           32,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =   1074036200,    r17 =         4072
+r18 =            8,    r19 =   1073956328
+r20 =   1074033800,    r21 =            3
+r22 =   1074033796,    r23 =            4
+r24 =   1074019048,    r25 =            0
+r26 =    537217800,    r27 =   1073926928
+r28 =    537214520,    r29 =   1073861392
+r30 =    536440336,    r31 =            0
+ 
+NUMBER OF CYCLES:                     120000
+NUMBER OF INSTRUCTIONS EXECUTED:      95712
+NUMBER OF INSTRUCTIONS COMMITTED:     93962
+NUMBER OF BRANCHES EXECUTED:          12550
+NUMBER OF BRANCHES COMMITTED:         12324
+IPC:                                  0.7830
+CPI:                                  1.2771
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 130000
+PC VALUE = 0x000000002005bfbc
+r00 =   1074019048,    r01 =   1074019032
+r02 =           16,    r03 =   1073926928
+r04 =            1,    r05 =           32
+r06 =            0,    r07 =           -8
+r08 =   1074023104,    r09 =   1074035376
+r10 =          -32,    r11 =   1073877576
+r12 =   1073906032,    r13 =   1073906104
+r14 =   1073753584,    r15 =   1073926928
+r16 =            0,    r17 =   1073795376
+r18 =   1073926928,    r19 =   1073956328
+r20 =   1074035608,    r21 =   1073926928
+r22 =   1073956328,    r23 =   1073926928
+r24 =   1073956328,    r25 =   1073926928
+r26 =    537248480,    r27 =   1073926928
+r28 =    537245344,    r29 =   1073861392
+r30 =    536440432,    r31 =            0
+ 
+NUMBER OF CYCLES:                     130000
+NUMBER OF INSTRUCTIONS EXECUTED:      102198
+NUMBER OF INSTRUCTIONS COMMITTED:     100266
+NUMBER OF BRANCHES EXECUTED:          13493
+NUMBER OF BRANCHES COMMITTED:         13251
+IPC:                                  0.7713
+CPI:                                  1.2966
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 140000
+PC VALUE = 0x0000000020053fa8
+r00 =   1074048248,    r01 =   1074048408
+r02 =          160,    r03 =   1074048248
+r04 =          352,    r05 =           26
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =           33
+r10 =   1073956328,    r11 =          100
+r12 =          160,    r13 =   1073906104
+r14 =   1073926928,    r15 =   1073926928
+r16 =   1074051048,    r17 =         4072
+r18 =           40,    r19 =   1074048248
+r20 =   1074048408,    r21 =           -1
+r22 =   1074048244,    r23 =           36
+r24 =   1074019048,    r25 =           -4
+r26 =    537227768,    r27 =            0
+r28 =    537214344,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     140000
+NUMBER OF INSTRUCTIONS EXECUTED:      109979
+NUMBER OF INSTRUCTIONS COMMITTED:     107842
+NUMBER OF BRANCHES EXECUTED:          14595
+NUMBER OF BRANCHES COMMITTED:         14333
+IPC:                                  0.7703
+CPI:                                  1.2982
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 150000
+PC VALUE = 0x0000000020053fdc
+r00 =   1074050688,    r01 =   1074050856
+r02 =          168,    r03 =   1074050688
+r04 =          424,    r05 =            0
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =            7
+r10 =   1073956328,    r11 =          116
+r12 =          168,    r13 =   1073906104
+r14 =   1073795856,    r15 =   1073926928
+r16 =   1074051048,    r17 =         4072
+r18 =           42,    r19 =            0
+r20 =   1074050856,    r21 =           -1
+r22 =   1074050684,    r23 =           38
+r24 =   1073956328,    r25 =           -2
+r26 =    537247752,    r27 =            0
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     150000
+NUMBER OF INSTRUCTIONS EXECUTED:      117868
+NUMBER OF INSTRUCTIONS COMMITTED:     115530
+NUMBER OF BRANCHES EXECUTED:          15731
+NUMBER OF BRANCHES COMMITTED:         15449
+IPC:                                  0.7702
+CPI:                                  1.2984
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 160000
+PC VALUE = 0x000000002005b608
+r00 =   1074053376,    r01 =   1074053376
+r02 =            0,    r03 =            0
+r04 =            0,    r05 =       524288
+r06 =            0,    r07 =   1074053376
+r08 =   1073885992,    r09 =           20
+r10 =   1073955376,    r11 =   1073906088
+r12 =   1073906032,    r13 =   1073906104
+r14 =            0,    r15 =   1073926928
+r16 =   1074053208,    r17 =        65536
+r18 =            0,    r19 =            0
+r20 =   1073783648,    r21 =           -1
+r22 =            0,    r23 =           36
+r24 =            1,    r25 =           -4
+r26 =    537080352,    r27 =            0
+r28 =    537214344,    r29 =   1073861392
+r30 =    536440496,    r31 =            0
+ 
+NUMBER OF CYCLES:                     160000
+NUMBER OF INSTRUCTIONS EXECUTED:      125652
+NUMBER OF INSTRUCTIONS COMMITTED:     123118
+NUMBER OF BRANCHES EXECUTED:          16868
+NUMBER OF BRANCHES COMMITTED:         16562
+IPC:                                  0.7695
+CPI:                                  1.2996
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 170000
+PC VALUE = 0x0000000020054708
+r00 =        11746,    r01 =            0
+r02 =          168,    r03 =           13
+r04 =           19,    r05 =            0
+r06 =            0,    r07 =   1073956328
+r08 =   1073885992,    r09 =   1073753840
+r10 =   1073906936,    r11 =   1073906928
+r12 =           19,    r13 =   1073906104
+r14 =   1073926928,    r15 =   1073906080
+r16 =         1824,    r17 =            0
+r18 =            1,    r19 =           25
+r20 =           16,    r21 =           -1
+r22 =   1074055804,    r23 =            7
+r24 =            1,    r25 =           -2
+r26 =    537081048,    r27 =            0
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     170000
+NUMBER OF INSTRUCTIONS EXECUTED:      133186
+NUMBER OF INSTRUCTIONS COMMITTED:     130501
+NUMBER OF BRANCHES EXECUTED:          17978
+NUMBER OF BRANCHES COMMITTED:         17664
+IPC:                                  0.7677
+CPI:                                  1.3027
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 180000
+PC VALUE = 0x0000000020061dfc
+r00 =           49,    r01 =   1074057712
+r02 =   1074027440,    r03 =            3
+r04 =           35,    r05 =            6
+r06 =            7,    r07 =            0
+r08 =          256,    r09 =   1074057672
+r10 =   1074057672,    r11 =   1074035376
+r12 =          106,    r13 =   1073906104
+r14 =            1,    r15 =   1073905872
+r16 =            0,    r17 =       131072
+r18 =           40,    r19 =   1074057712
+r20 =   1074057668,    r21 =           -1
+r22 =   1074057636,    r23 =         1050
+r24 =            0,    r25 =            0
+r26 =    537153944,    r27 =   1073956328
+r28 =    537214520,    r29 =   1073861392
+r30 =    536440304,    r31 =            0
+ 
+NUMBER OF CYCLES:                     180000
+NUMBER OF INSTRUCTIONS EXECUTED:      139454
+NUMBER OF INSTRUCTIONS COMMITTED:     136625
+NUMBER OF BRANCHES EXECUTED:          18861
+NUMBER OF BRANCHES COMMITTED:         18532
+IPC:                                  0.7590
+CPI:                                  1.3175
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 190000
+PC VALUE = 0x00000000200540e8
+r00 =   1074058448,    r01 =         1037
+r02 =          168,    r03 =         1024
+r04 =           36,    r05 =            0
+r06 =            0,    r07 =   1073956328
+r08 =   1073885992,    r09 =           13
+r10 =   1073956328,    r11 =            0
+r12 =          168,    r13 =   1073906104
+r14 =   1073926928,    r15 =   1073906080
+r16 =           23,    r17 =            0
+r18 =          168,    r19 =   1073956328
+r20 =           16,    r21 =           -1
+r22 =   1074058444,    r23 =            7
+r24 =            1,    r25 =           -2
+r26 =    537230680,    r27 =            0
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440432,    r31 =            0
+ 
+NUMBER OF CYCLES:                     190000
+NUMBER OF INSTRUCTIONS EXECUTED:      145011
+NUMBER OF INSTRUCTIONS COMMITTED:     142020
+NUMBER OF BRANCHES EXECUTED:          19649
+NUMBER OF BRANCHES COMMITTED:         19300
+IPC:                                  0.7475
+CPI:                                  1.3378
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 200000
+PC VALUE = 0x0000000020055930
+r00 =   1074060184,    r01 =   1074060224
+r02 =         1027,    r03 =   1074060184
+r04 =           88,    r05 =           64
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =   1073926928
+r10 =   1073926928,    r11 =   1073926928
+r12 =   1074059448,    r13 =   1073906104
+r14 =   1073926928,    r15 =   1074033536
+r16 =   1074063336,    r17 =         4072
+r18 =   1074063336,    r19 =   1074060224
+r20 =   1074060180,    r21 =           -1
+r22 =   1073956328,    r23 =           -2
+r24 =   1073956328,    r25 =   1073926928
+r26 =    537082176,    r27 =   1073956328
+r28 =    537245808,    r29 =   1073861392
+r30 =    536440544,    r31 =    537221428
+ 
+NUMBER OF CYCLES:                     200000
+NUMBER OF INSTRUCTIONS EXECUTED:      152705
+NUMBER OF INSTRUCTIONS COMMITTED:     149578
+NUMBER OF BRANCHES EXECUTED:          20731
+NUMBER OF BRANCHES COMMITTED:         20366
+IPC:                                  0.7479
+CPI:                                  1.3371
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 210000
+PC VALUE = 0x0000000020053fc0
+r00 =   1074062480,    r01 =   1074062648
+r02 =          168,    r03 =   1074062480
+r04 =          424,    r05 =           64
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =           24
+r10 =   1073956328,    r11 =          116
+r12 =          168,    r13 =   1073906488
+r14 =   1074056768,    r15 =            0
+r16 =   1074063336,    r17 =         4072
+r18 =           42,    r19 =   1074062480
+r20 =   1074062648,    r21 =           29
+r22 =   1074062596,    r23 =           38
+r24 =   1073956328,    r25 =           26
+r26 =    537231984,    r27 =   1073956328
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440464,    r31 =            0
+ 
+NUMBER OF CYCLES:                     210000
+NUMBER OF INSTRUCTIONS EXECUTED:      160094
+NUMBER OF INSTRUCTIONS COMMITTED:     156879
+NUMBER OF BRANCHES EXECUTED:          21752
+NUMBER OF BRANCHES COMMITTED:         21377
+IPC:                                  0.7470
+CPI:                                  1.3386
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 220000
+PC VALUE = 0x0000000020053fc0
+r00 =   1074063952,    r01 =   1074064120
+r02 =          168,    r03 =   1074063952
+r04 =          168,    r05 =       524288
+r06 =            7,    r07 =            0
+r08 =           -8,    r09 =           24
+r10 =   1073956328,    r11 =          116
+r12 =          168,    r13 =   1073906488
+r14 =   1074056768,    r15 =   1074062480
+r16 =   1074067432,    r17 =         4072
+r18 =           42,    r19 =   1074063952
+r20 =   1074064120,    r21 =           29
+r22 =   1074064068,    r23 =           38
+r24 =       262201,    r25 =           26
+r26 =    537231984,    r27 =   1073956328
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440464,    r31 =            0
+ 
+NUMBER OF CYCLES:                     220000
+NUMBER OF INSTRUCTIONS EXECUTED:      166941
+NUMBER OF INSTRUCTIONS COMMITTED:     163559
+NUMBER OF BRANCHES EXECUTED:          22721
+NUMBER OF BRANCHES COMMITTED:         22326
+IPC:                                  0.7434
+CPI:                                  1.3451
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 230000
+PC VALUE = 0x0000000020033f20
+r00 =   1074065456,    r01 =       546078
+r02 =            0,    r03 =            1
+r04 =           58,    r05 =       524288
+r06 =           34,    r07 =            0
+r08 =   1073957280,    r09 =   1073906696
+r10 =   1073906400,    r11 =        16384
+r12 =   1074059448,    r13 =   1073906488
+r14 =       525342,    r15 =   1074062480
+r16 =   1074065360,    r17 =        65536
+r18 =     67108864,    r19 =            0
+r20 =       262201,    r21 =            0
+r22 =            0,    r23 =   1074065632
+r24 =       262201,    r25 =    268435456
+r26 =    537083668,    r27 =    538339680
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440544,    r31 =            0
+ 
+NUMBER OF CYCLES:                     230000
+NUMBER OF INSTRUCTIONS EXECUTED:      174608
+NUMBER OF INSTRUCTIONS COMMITTED:     171090
+NUMBER OF BRANCHES EXECUTED:          23800
+NUMBER OF BRANCHES COMMITTED:         23397
+IPC:                                  0.7439
+CPI:                                  1.3443
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 240000
+PC VALUE = 0x00000000201634f4
+r00 =            0,    r01 =         4111
+r02 =            0,    r03 =   1073902104
+r04 =            0,    r05 =   1073953888
+r06 =            1,    r07 =            0
+r08 =   1073957280,    r09 =         4072
+r10 =           16,    r11 =   1073823288
+r12 =         4072,    r13 =   1073906488
+r14 =   1073754104,    r15 =   1074062480
+r16 =            0,    r17 =           16
+r18 =     67108864,    r19 =            0
+r20 =       262201,    r21 =            0
+r22 =            0,    r23 =   1074067320
+r24 =       262201,    r25 =    268435456
+r26 =    538326120,    r27 =    538332808
+r28 =    537214440,    r29 =   1073861392
+r30 =    536440320,    r31 =            0
+ 
+NUMBER OF CYCLES:                     240000
+NUMBER OF INSTRUCTIONS EXECUTED:      182412
+NUMBER OF INSTRUCTIONS COMMITTED:     178771
+NUMBER OF BRANCHES EXECUTED:          24874
+NUMBER OF BRANCHES COMMITTED:         24462
+IPC:                                  0.7449
+CPI:                                  1.3425
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 250000
+PC VALUE = 0x000000002005b68c
+r00 =   1074019088,    r01 =         1048
+r02 =           18,    r03 =            1
+r04 =            0,    r05 =            7
+r06 =            0,    r07 =           -8
+r08 =   1074023104,    r09 =   1074068904
+r10 =            0,    r11 =   1073753584
+r12 =   1074059448,    r13 =   1073906488
+r14 =   1073926928,    r15 =   1074062480
+r16 =         4072,    r17 =   1074019088
+r18 =   1073926928,    r19 =   1073956328
+r20 =           16,    r21 =   1073926928
+r22 =   1073956328,    r23 =   1073926928
+r24 =   1073956328,    r25 =   1073926928
+r26 =    537245280,    r27 =   1073926928
+r28 =    537245808,    r29 =   1073861392
+r30 =    536440464,    r31 =    537245328
+ 
+NUMBER OF CYCLES:                     250000
+NUMBER OF INSTRUCTIONS EXECUTED:      190128
+NUMBER OF INSTRUCTIONS COMMITTED:     186342
+NUMBER OF BRANCHES EXECUTED:          25972
+NUMBER OF BRANCHES COMMITTED:         25544
+IPC:                                  0.7454
+CPI:                                  1.3416
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 260000
+PC VALUE = 0x00000000200571dc
+r00 =   1074070728,    r01 =   1074070833
+r02 =            0,    r03 =   1074070840
+r04 =   1074070816,    r05 =           17
+r06 =            0,    r07 =            7
+r08 =            0,    r09 =   1073754264
+r10 =   1074061936,    r11 =           16
+r12 =   1073877640,    r13 =   1073906488
+r14 =   1073926928,    r15 =   1074062480
+r16 =           30,    r17 =   1074070728
+r18 =   1074061936,    r19 =   1074070840
+r20 =            0,    r21 =           -1
+r22 =   1074070724,    r23 =           11
+r24 =       262201,    r25 =           -2
+r26 =    537085292,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     260000
+NUMBER OF INSTRUCTIONS EXECUTED:      197915
+NUMBER OF INSTRUCTIONS COMMITTED:     194002
+NUMBER OF BRANCHES EXECUTED:          27033
+NUMBER OF BRANCHES COMMITTED:         26601
+IPC:                                  0.7462
+CPI:                                  1.3402
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 270000
+PC VALUE = 0x00000000200a01fc
+r00 =   1074072624,    r01 =            0
+r02 =      7235955,    r03 =   1074072720
+r04 =   1074072712,    r05 =            4
+r06 =            0,    r07 =            7
+r08 =            0,    r09 =   1074072464
+r10 =            0,    r11 =            1
+r12 =   1073877672,    r13 =   1073906488
+r14 =   1073926928,    r15 =   1074062480
+r16 =            0,    r17 =            0
+r18 =            1,    r19 =   1074072720
+r20 =            0,    r21 =           -1
+r22 =   1074072620,    r23 =           11
+r24 =       262201,    r25 =           -2
+r26 =    537526784,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440432,    r31 =            0
+ 
+NUMBER OF CYCLES:                     270000
+NUMBER OF INSTRUCTIONS EXECUTED:      205907
+NUMBER OF INSTRUCTIONS COMMITTED:     201877
+NUMBER OF BRANCHES EXECUTED:          28144
+NUMBER OF BRANCHES COMMITTED:         27704
+IPC:                                  0.7477
+CPI:                                  1.3374
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 280000
+PC VALUE = 0x00000000200ab240
+r00 =   1074074376,    r01 =   1074074392
+r02 =       262201,    r03 =           57
+r04 =       262144,    r05 =           57
+r06 =           57,    r07 =   1073796192
+r08 =   1073957280,    r09 =   1073957508
+r10 =   1074074376,    r11 =   1073889465
+r12 =            0,    r13 =   1074070688
+r14 =            4,    r15 =   1074062480
+r16 =            1,    r17 =            0
+r18 =   1073889465,    r19 =            0
+r20 =   1074074360,    r21 =           -1
+r22 =            0,    r23 =           36
+r24 =       262201,    r25 =           57
+r26 =            1,    r27 =    538339680
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440320,    r31 =            0
+ 
+NUMBER OF CYCLES:                     280000
+NUMBER OF INSTRUCTIONS EXECUTED:      213612
+NUMBER OF INSTRUCTIONS COMMITTED:     209452
+NUMBER OF BRANCHES EXECUTED:          29210
+NUMBER OF BRANCHES COMMITTED:         28762
+IPC:                                  0.7480
+CPI:                                  1.3368
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 290000
+PC VALUE = 0x0000000020031bb0
+r00 =            0,    r01 =            1
+r02 =            0,    r03 =            0
+r04 =       262144,    r05 =           57
+r06 =    134217728,    r07 =           64
+r08 =   1073957280,    r09 =   1074075760
+r10 =   1073905864,    r11 =   1074075664
+r12 =   1073902752,    r13 =   1074036736
+r14 =            0,    r15 =           63
+r16 =            0,    r17 =            0
+r18 =     67108864,    r19 =            0
+r20 =       262201,    r21 =            0
+r22 =            0,    r23 =   1074075936
+r24 =       262201,    r25 =    268435456
+r26 =    537074180,    r27 =    538339680
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     290000
+NUMBER OF INSTRUCTIONS EXECUTED:      221336
+NUMBER OF INSTRUCTIONS COMMITTED:     217098
+NUMBER OF BRANCHES EXECUTED:          30309
+NUMBER OF BRANCHES COMMITTED:         29858
+IPC:                                  0.7486
+CPI:                                  1.3358
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 300000
+PC VALUE = 0x00000000200a13f4
+r00 =           37,    r01 =            0
+r02 =          320,    r03 =           57
+r04 =   1074047856,    r05 =       112560
+r06 =    134217728,    r07 =        32768
+r08 =   1074076944,    r09 =   1074076704
+r10 =   1074076864,    r11 =            1
+r12 =            0,    r13 =            0
+r14 =            0,    r15 =            0
+r16 =   1074076704,    r17 =            1
+r18 =            0,    r19 =            0
+r20 =    337182777,    r21 =           24
+r22 =   1074076928,    r23 =   1074076944
+r24 =     68747321,    r25 =    268435456
+r26 =    537197768,    r27 =    538339680
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440256,    r31 =            0
+ 
+NUMBER OF CYCLES:                     300000
+NUMBER OF INSTRUCTIONS EXECUTED:      226944
+NUMBER OF INSTRUCTIONS COMMITTED:     222574
+NUMBER OF BRANCHES EXECUTED:          31121
+NUMBER OF BRANCHES COMMITTED:         30650
+IPC:                                  0.7419
+CPI:                                  1.3479
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 310000
+PC VALUE = 0x000000002009e490
+r00 =   1074085904,    r01 =            1
+r02 =   1073974976,    r03 =   1073970256
+r04 =            1,    r05 =   1073974964
+r06 =            1,    r07 =           -8
+r08 =            1,    r09 =          231
+r10 =   1073907104,    r11 =            0
+r12 =   1073907280,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            1,    r17 =   1074085904
+r18 =   1073926928,    r19 =   1074089976
+r20 =            0,    r21 =           10
+r22 =            0,    r23 =   1073823152
+r24 =            0,    r25 =         4096
+r26 =    537192920,    r27 =    538333576
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440560,    r31 =            0
+ 
+NUMBER OF CYCLES:                     310000
+NUMBER OF INSTRUCTIONS EXECUTED:      234518
+NUMBER OF INSTRUCTIONS COMMITTED:     229974
+NUMBER OF BRANCHES EXECUTED:          32245
+NUMBER OF BRANCHES COMMITTED:         31751
+IPC:                                  0.7419
+CPI:                                  1.3480
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 320000
+PC VALUE = 0x000000002009e550
+r00 =   1074085904,    r01 =            1
+r02 =            1,    r03 =            1
+r04 =            1,    r05 =            1
+r06 =   1073989376,    r07 =   1073986000
+r08 =   1073989364,    r09 =          231
+r10 =   1073907104,    r11 =            0
+r12 =   1073907280,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            1,    r17 =   1074085904
+r18 =   1073926928,    r19 =            1
+r20 =   1073982176,    r21 =   1073982176
+r22 =            1,    r23 =   1073982164
+r24 =            1,    r25 =         4096
+r26 =            0,    r27 =            0
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440560,    r31 =            0
+ 
+NUMBER OF CYCLES:                     320000
+NUMBER OF INSTRUCTIONS EXECUTED:      242419
+NUMBER OF INSTRUCTIONS COMMITTED:     237870
+NUMBER OF BRANCHES EXECUTED:          33238
+NUMBER OF BRANCHES COMMITTED:         32743
+IPC:                                  0.7433
+CPI:                                  1.3453
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 330000
+PC VALUE = 0x000000002009e158
+r00 =   1074092544,    r01 =   1073823288
+r02 =   1074092792,    r03 =   1074093032
+r04 =          231,    r05 =   1073953944
+r06 =            1,    r07 =   1073989944
+r08 =            0,    r09 =           71
+r10 =   1073908200,    r11 =   1073908208
+r12 =   1073926928,    r13 =   1073926928
+r14 =   1073908496,    r15 =   1073926928
+r16 =   1073827328,    r17 =            0
+r18 =          512,    r19 =          -14
+r20 =   1074092544,    r21 =           10
+r22 =            1,    r23 =   1073823152
+r24 =   1073953944,    r25 =            1
+r26 =    537518368,    r27 =    538325360
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440544,    r31 =            0
+ 
+NUMBER OF CYCLES:                     330000
+NUMBER OF INSTRUCTIONS EXECUTED:      250308
+NUMBER OF INSTRUCTIONS COMMITTED:     245680
+NUMBER OF BRANCHES EXECUTED:          34256
+NUMBER OF BRANCHES COMMITTED:         33753
+IPC:                                  0.7445
+CPI:                                  1.3432
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 340000
+PC VALUE = 0x000000002004de60
+r00 =   1074106880,    r01 =   1073926928
+r02 =   1074107368,    r03 =   1074107368
+r04 =          231,    r05 =   1073953944
+r06 =            0,    r07 =   1073990264
+r08 =            0,    r09 =            0
+r10 =   1073908200,    r11 =   1073908208
+r12 =   1073908600,    r13 =   1073908232
+r14 =   1073908496,    r15 =   1073908512
+r16 =          488,    r17 =            0
+r18 =          512,    r19 =          -14
+r20 =   1074106880,    r21 =           10
+r22 =            1,    r23 =   1073823152
+r24 =   1073953944,    r25 =            1
+r26 =    537518368,    r27 =    538325360
+r28 =    537214592,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     340000
+NUMBER OF INSTRUCTIONS EXECUTED:      258746
+NUMBER OF INSTRUCTIONS COMMITTED:     253932
+NUMBER OF BRANCHES EXECUTED:          35398
+NUMBER OF BRANCHES COMMITTED:         34881
+IPC:                                  0.7469
+CPI:                                  1.3389
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 350000
+PC VALUE = 0x000000002004de5c
+r00 =            5,    r01 =   1073888875
+r02 =            4,    r03 =            4
+r04 =            0,    r05 =            4
+r06 =           59,    r07 =   1073796208
+r08 =   1073957280,    r09 =   1074030272
+r10 =           11,    r11 =           14
+r12 =   1073887032,    r13 =   1073888872
+r14 =            3,    r15 =   1073795104
+r16 =            9,    r17 =           11
+r18 =           14,    r19 =   1073887032
+r20 =           51,    r21 =   1074097664
+r22 =            1,    r23 =   1970495327
+r24 =            0,    r25 =            0
+r26 =    537518644,    r27 =    538339680
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440432,    r31 =           98
+ 
+NUMBER OF CYCLES:                     350000
+NUMBER OF INSTRUCTIONS EXECUTED:      265523
+NUMBER OF INSTRUCTIONS COMMITTED:     260623
+NUMBER OF BRANCHES EXECUTED:          36181
+NUMBER OF BRANCHES COMMITTED:         35660
+IPC:                                  0.7446
+CPI:                                  1.3429
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 360000
+PC VALUE = 0x00000000200a6248
+r00 =   1074078304,    r01 =   1074078320
+r02 =           23,    r03 =   1074078304
+r04 =           24,    r05 =           24
+r06 =           59,    r07 =            0
+r08 =           59,    r09 =            4
+r10 =   1073956328,    r11 =           16
+r12 =            0,    r13 =   1073888827
+r14 =            4,    r15 =   1074109545
+r16 =            7,    r17 =            4
+r18 =   1074109536,    r19 =        13161
+r20 =          105,    r21 =   1074097664
+r22 =            1,    r23 =   1685413727
+r24 =            0,    r25 =          118
+r26 =    537571640,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440304,    r31 =            0
+ 
+NUMBER OF CYCLES:                     360000
+NUMBER OF INSTRUCTIONS EXECUTED:      273312
+NUMBER OF INSTRUCTIONS COMMITTED:     268320
+NUMBER OF BRANCHES EXECUTED:          37039
+NUMBER OF BRANCHES COMMITTED:         36518
+IPC:                                  0.7453
+CPI:                                  1.3417
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 370000
+PC VALUE = 0x00000000200ab1ec
+r00 =   1074078576,    r01 =   1074078592
+r02 =       262203,    r03 =           59
+r04 =       262144,    r05 =           59
+r06 =           59,    r07 =   1073796208
+r08 =   1073957280,    r09 =   1073957516
+r10 =   1074078576,    r11 =   1073889481
+r12 =            0,    r13 =   1073888834
+r14 =            4,    r15 =   1074110088
+r16 =            1,    r17 =           14
+r18 =   1073889481,    r19 =            0
+r20 =          111,    r21 =   1074097664
+r22 =            1,    r23 =   1836408671
+r24 =            0,    r25 =          100
+r26 =            1,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440336,    r31 =    537571824
+ 
+NUMBER OF CYCLES:                     370000
+NUMBER OF INSTRUCTIONS EXECUTED:      281217
+NUMBER OF INSTRUCTIONS COMMITTED:     276140
+NUMBER OF BRANCHES EXECUTED:          37908
+NUMBER OF BRANCHES COMMITTED:         37387
+IPC:                                  0.7463
+CPI:                                  1.3399
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 380000
+PC VALUE = 0x00000000200ab1d4
+r00 =   1074078848,    r01 =   1074078864
+r02 =       262203,    r03 =           59
+r04 =       262144,    r05 =           59
+r06 =           59,    r07 =   1073796208
+r08 =   1073957280,    r09 =   1073957516
+r10 =   1074078848,    r11 =   1073889481
+r12 =            0,    r13 =   1073888842
+r14 =            3,    r15 =   1074110631
+r16 =            1,    r17 =          115
+r18 =   1073889481,    r19 =            0
+r20 =          114,    r21 =           10
+r22 =            1,    r23 =   1869176671
+r24 =            0,    r25 =            0
+r26 =            1,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440336,    r31 =            0
+ 
+NUMBER OF CYCLES:                     380000
+NUMBER OF INSTRUCTIONS EXECUTED:      289105
+NUMBER OF INSTRUCTIONS COMMITTED:     283944
+NUMBER OF BRANCHES EXECUTED:          38810
+NUMBER OF BRANCHES COMMITTED:         38289
+IPC:                                  0.7472
+CPI:                                  1.3383
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 390000
+PC VALUE = 0x000000002009e254
+r00 =   1074111200,    r01 =   1073823288
+r02 =   1073823304,    r03 =   1074111201
+r04 =           95,    r05 =           95
+r06 =           95,    r07 =   1073796208
+r08 =           95,    r09 =            1
+r10 =            5,    r11 =            7
+r12 =   1073887168,    r13 =   1073888824
+r14 =            4,    r15 =   1073795056
+r16 =   1073827328,    r17 =            0
+r18 =   1074111168,    r19 =            0
+r20 =   1074079120,    r21 =           10
+r22 =            1,    r23 =   1936482143
+r24 =            0,    r25 =          114
+r26 =    537518644,    r27 =    538325360
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     390000
+NUMBER OF INSTRUCTIONS EXECUTED:      296948
+NUMBER OF INSTRUCTIONS COMMITTED:     291705
+NUMBER OF BRANCHES EXECUTED:          39679
+NUMBER OF BRANCHES COMMITTED:         39158
+IPC:                                  0.7480
+CPI:                                  1.3370
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 400000
+PC VALUE = 0x00000000200a6234
+r00 =   1074079408,    r01 =   1074079424
+r02 =           23,    r03 =   1074079408
+r04 =           24,    r05 =           24
+r06 =            0,    r07 =            0
+r08 =           59,    r09 =           59
+r10 =   1073956328,    r11 =           16
+r12 =            0,    r13 =   1073888890
+r14 =            3,    r15 =   1074111751
+r16 =            7,    r17 =            4
+r18 =   1074111744,    r19 =            0
+r20 =          110,    r21 =           10
+r22 =            1,    r23 =   1768775519
+r24 =            0,    r25 =            0
+r26 =    537571640,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440304,    r31 =            0
+ 
+NUMBER OF CYCLES:                     400000
+NUMBER OF INSTRUCTIONS EXECUTED:      304818
+NUMBER OF INSTRUCTIONS COMMITTED:     299481
+NUMBER OF BRANCHES EXECUTED:          40545
+NUMBER OF BRANCHES COMMITTED:         40024
+IPC:                                  0.7487
+CPI:                                  1.3356
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 410000
+PC VALUE = 0x000000002009e2f8
+r00 =   1701732191,    r01 =   1694498816
+r02 =          103,    r03 =   1074112321
+r04 =           83,    r05 =           95
+r06 =        18771,    r07 =   1073953908
+r08 =   1073902152,    r09 =   1074112320
+r10 =            4,    r11 =            7
+r12 =   1073887240,    r13 =   1073888816
+r14 =            3,    r15 =   1074112325
+r16 =        24320,    r17 =   1073887243
+r18 =          110,    r19 =   1074112325
+r20 =          103,    r21 =           10
+r22 =            1,    r23 =   1701732191
+r24 =            0,    r25 =            0
+r26 =    537518644,    r27 =    538325360
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     410000
+NUMBER OF INSTRUCTIONS EXECUTED:      312667
+NUMBER OF INSTRUCTIONS COMMITTED:     307251
+NUMBER OF BRANCHES EXECUTED:          41415
+NUMBER OF BRANCHES COMMITTED:         40894
+IPC:                                  0.7494
+CPI:                                  1.3344
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 420000
+PC VALUE = 0x000000002009e2b8
+r00 =   1835229023,    r01 =   1828716544
+r02 =          112,    r03 =   1074116929
+r04 =           95,    r05 =           95
+r06 =           95,    r07 =   1073953908
+r08 =        24415,    r09 =   1074116928
+r10 =            4,    r11 =            7
+r12 =   1073887264,    r13 =   1073888816
+r14 =            3,    r15 =   1074116933
+r16 =        24320,    r17 =   1073887267
+r18 =           99,    r19 =           -2
+r20 =          112,    r21 =           10
+r22 =            1,    r23 =   1835229023
+r24 =            0,    r25 =            0
+r26 =    537518644,    r27 =    538325360
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     420000
+NUMBER OF INSTRUCTIONS EXECUTED:      320621
+NUMBER OF INSTRUCTIONS COMMITTED:     315105
+NUMBER OF BRANCHES EXECUTED:          42353
+NUMBER OF BRANCHES COMMITTED:         41828
+IPC:                                  0.7502
+CPI:                                  1.3329
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 430000
+PC VALUE = 0x00000000200a6244
+r00 =   1074113248,    r01 =   1074113264
+r02 =           23,    r03 =   1074113248
+r04 =           24,    r05 =           24
+r06 =           59,    r07 =            0
+r08 =           59,    r09 =           59
+r10 =   1073956328,    r11 =           16
+r12 =            0,    r13 =   1073926928
+r14 =   1073926928,    r15 =   1073926928
+r16 =            7,    r17 =            4
+r18 =   1073887352,    r19 =            0
+r20 =   1074113232,    r21 =           10
+r22 =            1,    r23 =   1835229023
+r24 =            0,    r25 =            0
+r26 =    537571640,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     430000
+NUMBER OF INSTRUCTIONS EXECUTED:      328269
+NUMBER OF INSTRUCTIONS COMMITTED:     322698
+NUMBER OF BRANCHES EXECUTED:          43154
+NUMBER OF BRANCHES COMMITTED:         42629
+IPC:                                  0.7505
+CPI:                                  1.3325
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 440000
+PC VALUE = 0x00000000200ab01c
+r00 =           59,    r01 =    536440504
+r02 =       262203,    r03 =           16
+r04 =           24,    r05 =           59
+r06 =           59,    r07 =   1073796208
+r08 =   1073957280,    r09 =            4
+r10 =   1073926928,    r11 =   1073926928
+r12 =   1073789952,    r13 =   1073926928
+r14 =   1073926928,    r15 =   1073926928
+r16 =    536440512,    r17 =            4
+r18 =   1073790544,    r19 =            0
+r20 =   1074114096,    r21 =           10
+r22 =            1,    r23 =   1835229023
+r24 =            0,    r25 =            0
+r26 =    537524000,    r27 =            0
+r28 =    537571904,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     440000
+NUMBER OF INSTRUCTIONS EXECUTED:      335669
+NUMBER OF INSTRUCTIONS COMMITTED:     330098
+NUMBER OF BRANCHES EXECUTED:          43852
+NUMBER OF BRANCHES COMMITTED:         43327
+IPC:                                  0.7502
+CPI:                                  1.3329
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 450000
+PC VALUE = 0x000000002014113c
+r00 =           31,    r01 =          -63
+r02 =           68,    r03 =            0
+r04 =           31,    r05 =            0
+r06 =           27,    r07 =            5
+r08 =            1,    r09 =    536440592
+r10 =   1074114488,    r11 =    536440592
+r12 =   1074114288,    r13 =   1073992464
+r14 =   1074114464,    r15 =            2
+r16 =            0,    r17 =           65
+r18 =            0,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    538191324,    r27 =    538333576
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440352,    r31 =            0
+ 
+NUMBER OF CYCLES:                     450000
+NUMBER OF INSTRUCTIONS EXECUTED:      340777
+NUMBER OF INSTRUCTIONS COMMITTED:     335118
+NUMBER OF BRANCHES EXECUTED:          44526
+NUMBER OF BRANCHES COMMITTED:         43990
+IPC:                                  0.7447
+CPI:                                  1.3428
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 460000
+PC VALUE = 0x000000002013df84
+r00 =            0,    r01 =          -33
+r02 =        10000,    r03 =            0
+r04 =         9936,    r05 =            7
+r06 =           37,    r07 =         8192
+r08 =         1023,    r09 =   1074114648
+r10 =   1074114672,    r11 =    536440592
+r12 =   1074114288,    r13 =   1074114400
+r14 =   1074114536,    r15 =           32
+r16 =   1074114288,    r17 =            4
+r18 =       262196,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    538191296,    r27 =    538333576
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440400,    r31 =            0
+ 
+NUMBER OF CYCLES:                     460000
+NUMBER OF INSTRUCTIONS EXECUTED:      348829
+NUMBER OF INSTRUCTIONS COMMITTED:     343059
+NUMBER OF BRANCHES EXECUTED:          46116
+NUMBER OF BRANCHES COMMITTED:         45564
+IPC:                                  0.7458
+CPI:                                  1.3409
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 470000
+PC VALUE = 0x00000000200c64d0
+r00 =            5,    r01 =            1
+r02 =            5,    r03 =            2
+r04 =          -28,    r05 =            7
+r06 =            6,    r07 =           31
+r08 =            0,    r09 =   1074022728
+r10 =           47,    r11 =            2
+r12 =            1,    r13 =   1073889633
+r14 =          101,    r15 =            1
+r16 =          107,    r17 =           78
+r18 =            0,    r19 =   1073889632
+r20 =            2,    r21 =        25957
+r22 =   1074114360,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    537683836,    r27 =    538333576
+r28 =    538188952,    r29 =   1073861392
+r30 =    536440368,    r31 =            0
+ 
+NUMBER OF CYCLES:                     470000
+NUMBER OF INSTRUCTIONS EXECUTED:      357695
+NUMBER OF INSTRUCTIONS COMMITTED:     351798
+NUMBER OF BRANCHES EXECUTED:          47840
+NUMBER OF BRANCHES COMMITTED:         47269
+IPC:                                  0.7485
+CPI:                                  1.3360
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 480000
+PC VALUE = 0x000000002008f404
+r00 =   1074114976,    r01 =   1074114992
+r02 =           23,    r03 =   1074114976
+r04 =        16385,    r05 =            7
+r06 =           47,    r07 =            0
+r08 =           47,    r09 =   1074114600
+r10 =           14,    r11 =   1074114672
+r12 =   1073927448,    r13 =   1074114400
+r14 =   1074114536,    r15 =        16384
+r16 =   1074114648,    r17 =   1074114672
+r18 =    536440592,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    537457640,    r27 =    538333576
+r28 =    538187776,    r29 =   1073861392
+r30 =    536440528,    r31 =    537192952
+ 
+NUMBER OF CYCLES:                     480000
+NUMBER OF INSTRUCTIONS EXECUTED:      366494
+NUMBER OF INSTRUCTIONS COMMITTED:     360481
+NUMBER OF BRANCHES EXECUTED:          49526
+NUMBER OF BRANCHES COMMITTED:         48938
+IPC:                                  0.7510
+CPI:                                  1.3316
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 490000
+PC VALUE = 0x0000000020141cc8
+r00 =            1,    r01 =            2
+r02 =        10000,    r03 =            0
+r04 =         9936,    r05 =            7
+r06 =            6,    r07 =         8192
+r08 =         1023,    r09 =   1073991056
+r10 =   1074114352,    r11 =   1074022872
+r12 =   1074114288,    r13 =   1073992464
+r14 =   1074114536,    r15 =   1074114352
+r16 =   1074114288,    r17 =            4
+r18 =            0,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    538188976,    r27 =    538333576
+r28 =    538188952,    r29 =   1073861392
+r30 =    536440368,    r31 =            0
+ 
+NUMBER OF CYCLES:                     490000
+NUMBER OF INSTRUCTIONS EXECUTED:      375381
+NUMBER OF INSTRUCTIONS COMMITTED:     369249
+NUMBER OF BRANCHES EXECUTED:          51238
+NUMBER OF BRANCHES COMMITTED:         50633
+IPC:                                  0.7536
+CPI:                                  1.3270
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 500000
+PC VALUE = 0x000000002013df80
+r00 =            0,    r01 =            2
+r02 =        10000,    r03 =            0
+r04 =   1073926928,    r05 =            7
+r06 =           37,    r07 =         8192
+r08 =         1023,    r09 =   1074114512
+r10 =   1074114288,    r11 =    536440592
+r12 =   1074114288,    r13 =   1073991056
+r14 =   1073991056,    r15 =   1074114488
+r16 =   1074114288,    r17 =            4
+r18 =            0,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    538200032,    r27 =    538333576
+r28 =    538187776,    r29 =   1073861392
+r30 =    536440400,    r31 =            0
+ 
+NUMBER OF CYCLES:                     500000
+NUMBER OF INSTRUCTIONS EXECUTED:      384183
+NUMBER OF INSTRUCTIONS COMMITTED:     377927
+NUMBER OF BRANCHES EXECUTED:          52935
+NUMBER OF BRANCHES COMMITTED:         52311
+IPC:                                  0.7559
+CPI:                                  1.3230
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 510000
+PC VALUE = 0x000000002013df80
+r00 =            0,    r01 =          -37
+r02 =        10000,    r03 =            0
+r04 =   1073926928,    r05 =            7
+r06 =            6,    r07 =         8192
+r08 =         1023,    r09 =   1074114288
+r10 =            4,    r11 =    536440592
+r12 =   1074114288,    r13 =   1073992464
+r14 =   1074114536,    r15 =            1
+r16 =   1074114288,    r17 =            4
+r18 =           47,    r19 =         9936
+r20 =            0,    r21 =         9936
+r22 =   1074114352,    r23 =            0
+r24 =            0,    r25 =         4096
+r26 =    538285024,    r27 =    538333576
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440368,    r31 =            0
+ 
+NUMBER OF CYCLES:                     510000
+NUMBER OF INSTRUCTIONS EXECUTED:      393034
+NUMBER OF INSTRUCTIONS COMMITTED:     386661
+NUMBER OF BRANCHES EXECUTED:          54630
+NUMBER OF BRANCHES COMMITTED:         53989
+IPC:                                  0.7582
+CPI:                                  1.3190
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 520000
+PC VALUE = 0x00000000200aead4
+r00 =            0,    r01 =   1073926928
+r02 =   1074114304,    r03 =   1073903568
+r04 =          -36,    r05 =            0
+r06 =            0,    r07 =            0
+r08 =   1073891248,    r09 =   1073926928
+r10 =            4,    r11 =            4
+r12 =            8,    r13 =   1073903440
+r14 =            8,    r15 =   1073903440
+r16 =       262214,    r17 =           41
+r18 =   1073889570,    r19 =            0
+r20 =            0,    r21 =           32
+r22 =   1074023080,    r23 =   1074115584
+r24 =            0,    r25 =         4096
+r26 =    537458040,    r27 =    538333576
+r28 =    537683608,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     520000
+NUMBER OF INSTRUCTIONS EXECUTED:      401577
+NUMBER OF INSTRUCTIONS COMMITTED:     395071
+NUMBER OF BRANCHES EXECUTED:          56229
+NUMBER OF BRANCHES COMMITTED:         55568
+IPC:                                  0.7598
+CPI:                                  1.3162
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 530000
+PC VALUE = 0x00000000200ab0e0
+r00 =   1074033344,    r01 =    536440472
+r02 =           52,    r03 =            0
+r04 =            0,    r05 =           24
+r06 =        65792,    r07 =            2
+r08 =   1073926928,    r09 =            6
+r10 =            2,    r11 =            1
+r12 =   1074114360,    r13 =            6
+r14 =   1073926534,    r15 =            2
+r16 =    536440480,    r17 =   1073926928
+r18 =            2,    r19 =           64
+r20 =       393273,    r21 =           57
+r22 =       393216,    r23 =           31
+r24 =            0,    r25 =            5
+r26 =    537363400,    r27 =      7986902
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     530000
+NUMBER OF INSTRUCTIONS EXECUTED:      409561
+NUMBER OF INSTRUCTIONS COMMITTED:     402900
+NUMBER OF BRANCHES EXECUTED:          57679
+NUMBER OF BRANCHES COMMITTED:         57001
+IPC:                                  0.7602
+CPI:                                  1.3155
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 540000
+PC VALUE = 0x00000000200784d4
+r00 =            0,    r01 =   1074114656
+r02 =       458809,    r03 =            3
+r04 =           -5,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =            7
+r14 =   1073926535,    r15 =           59
+r16 =           52,    r17 =            7
+r18 =       458809,    r19 =           64
+r20 =       458809,    r21 =           57
+r22 =       458752,    r23 =           30
+r24 =            0,    r25 =            6
+r26 =    537363640,    r27 =      1613334
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     540000
+NUMBER OF INSTRUCTIONS EXECUTED:      418240
+NUMBER OF INSTRUCTIONS COMMITTED:     411501
+NUMBER OF BRANCHES EXECUTED:          59299
+NUMBER OF BRANCHES COMMITTED:         58619
+IPC:                                  0.7620
+CPI:                                  1.3123
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 550000
+PC VALUE = 0x00000000200ab0e0
+r00 =   1074033344,    r01 =    536440472
+r02 =           52,    r03 =            0
+r04 =            0,    r05 =           24
+r06 =           10,    r07 =           13
+r08 =   1073926928,    r09 =            9
+r10 =           12,    r11 =            1
+r12 =   1074114360,    r13 =            9
+r14 =   1073926537,    r15 =           12
+r16 =    536440480,    r17 =   1073926928
+r18 =           12,    r19 =           64
+r20 =       589881,    r21 =           57
+r22 =       589824,    r23 =           16
+r24 =            0,    r25 =            8
+r26 =    537363400,    r27 =      3710550
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     550000
+NUMBER OF INSTRUCTIONS EXECUTED:      427174
+NUMBER OF INSTRUCTIONS COMMITTED:     420429
+NUMBER OF BRANCHES EXECUTED:          60910
+NUMBER OF BRANCHES COMMITTED:         60230
+IPC:                                  0.7644
+CPI:                                  1.3082
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 560000
+PC VALUE = 0x0000000020142ddc
+r00 =           -1,    r01 =   1074115040
+r02 =           21,    r03 =       589881
+r04 =            5,    r05 =            1
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074114328,    r13 =            9
+r14 =   1073991056,    r15 =           10
+r16 =           20,    r17 =   1074114328
+r18 =       589881,    r19 =           64
+r20 =       589881,    r21 =           57
+r22 =       589824,    r23 =           16
+r24 =           15,    r25 =            8
+r26 =           11,    r27 =           13
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     560000
+NUMBER OF INSTRUCTIONS EXECUTED:      435852
+NUMBER OF INSTRUCTIONS COMMITTED:     429107
+NUMBER OF BRANCHES EXECUTED:          62499
+NUMBER OF BRANCHES COMMITTED:         61819
+IPC:                                  0.7663
+CPI:                                  1.3050
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 570000
+PC VALUE = 0x00000000201448a0
+r00 =           -1,    r01 =   1074115248
+r02 =       589876,    r03 =           13
+r04 =            5,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =    536440592,    r11 =   1074115232
+r12 =   1074114360,    r13 =            9
+r14 =   1073991056,    r15 =   1074114328
+r16 =   1074115232,    r17 =            4
+r18 =       589876,    r19 =           64
+r20 =       589881,    r21 =           57
+r22 =       589824,    r23 =           16
+r24 =           15,    r25 =            8
+r26 =    538213160,    r27 =           13
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     570000
+NUMBER OF INSTRUCTIONS EXECUTED:      444538
+NUMBER OF INSTRUCTIONS COMMITTED:     437793
+NUMBER OF BRANCHES EXECUTED:          64089
+NUMBER OF BRANCHES COMMITTED:         63409
+IPC:                                  0.7681
+CPI:                                  1.3020
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 580000
+PC VALUE = 0x0000000020078378
+r00 =           -1,    r01 =   1074115440
+r02 =       589881,    r03 =           13
+r04 =          -14,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =            9
+r14 =   1073926537,    r15 =           50
+r16 =   1074114344,    r17 =            4
+r18 =       589881,    r19 =           64
+r20 =       589881,    r21 =           57
+r22 =       589824,    r23 =           16
+r24 =            0,    r25 =            8
+r26 =    537363640,    r27 =           13
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     580000
+NUMBER OF INSTRUCTIONS EXECUTED:      453226
+NUMBER OF INSTRUCTIONS COMMITTED:     446481
+NUMBER OF BRANCHES EXECUTED:          65690
+NUMBER OF BRANCHES COMMITTED:         65010
+IPC:                                  0.7698
+CPI:                                  1.2990
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 590000
+PC VALUE = 0x0000000020141de0
+r00 =           -1,    r01 =   1074115648
+r02 =           41,    r03 =            7
+r04 =            1,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =    536440592,    r11 =   1074115632
+r12 =   1074114360,    r13 =            9
+r14 =   1073926537,    r15 =           62
+r16 =   1074114360,    r17 =   1074114384
+r18 =    536440592,    r19 =           64
+r20 =       589881,    r21 =           57
+r22 =       589824,    r23 =           16
+r24 =           15,    r25 =            8
+r26 =    538213160,    r27 =           13
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     590000
+NUMBER OF INSTRUCTIONS EXECUTED:      461907
+NUMBER OF INSTRUCTIONS COMMITTED:     455162
+NUMBER OF BRANCHES EXECUTED:          67275
+NUMBER OF BRANCHES COMMITTED:         66595
+IPC:                                  0.7715
+CPI:                                  1.2962
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 600000
+PC VALUE = 0x0000000020146f54
+r00 =   1074115840,    r01 =   1074115856
+r02 =           41,    r03 =            7
+r04 =            1,    r05 =           24
+r06 =           52,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =    536440592,    r11 =   1074115840
+r12 =   1074114360,    r13 =           10
+r14 =   1073926538,    r15 =           12
+r16 =   1074114360,    r17 =   1074114384
+r18 =    536440592,    r19 =           64
+r20 =       655417,    r21 =           57
+r22 =       655360,    r23 =           19
+r24 =            0,    r25 =           11
+r26 =    537363440,    r27 =      3710550
+r28 =    536912476,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     600000
+NUMBER OF INSTRUCTIONS EXECUTED:      470594
+NUMBER OF INSTRUCTIONS COMMITTED:     463842
+NUMBER OF BRANCHES EXECUTED:          68861
+NUMBER OF BRANCHES COMMITTED:         68180
+IPC:                                  0.7731
+CPI:                                  1.2935
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 610000
+PC VALUE = 0x0000000020141de8
+r00 =           -1,    r01 =   1074116048
+r02 =           41,    r03 =            7
+r04 =            1,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =    536440592,    r11 =            1
+r12 =   1074114360,    r13 =           10
+r14 =   1073926538,    r15 =           24
+r16 =   1074114360,    r17 =   1074114384
+r18 =    536440592,    r19 =           64
+r20 =       655417,    r21 =           57
+r22 =       655360,    r23 =           19
+r24 =           12,    r25 =           11
+r26 =    538213160,    r27 =           14
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     610000
+NUMBER OF INSTRUCTIONS EXECUTED:      479279
+NUMBER OF INSTRUCTIONS COMMITTED:     472527
+NUMBER OF BRANCHES EXECUTED:          70460
+NUMBER OF BRANCHES COMMITTED:         69779
+IPC:                                  0.7746
+CPI:                                  1.2909
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 620000
+PC VALUE = 0x00000000201432e0
+r00 =           -1,    r01 =   1074116256
+r02 =           22,    r03 =       655412
+r04 =            6,    r05 =            1
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074116240,    r13 =           10
+r14 =   1073926538,    r15 =            7
+r16 =           23,    r17 =   1074116240
+r18 =       655412,    r19 =           64
+r20 =       655417,    r21 =           57
+r22 =       655360,    r23 =           19
+r24 =           12,    r25 =           11
+r26 =            8,    r27 =           14
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     620000
+NUMBER OF INSTRUCTIONS EXECUTED:      487964
+NUMBER OF INSTRUCTIONS COMMITTED:     481212
+NUMBER OF BRANCHES EXECUTED:          72051
+NUMBER OF BRANCHES COMMITTED:         71370
+IPC:                                  0.7761
+CPI:                                  1.2884
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 630000
+PC VALUE = 0x00000000200a6240
+r00 =   1074116448,    r01 =   1074116464
+r02 =           23,    r03 =   1074116448
+r04 =            0,    r05 =           24
+r06 =           52,    r07 =            0
+r08 =           52,    r09 =           52
+r10 =   1073956328,    r11 =           16
+r12 =   1074114360,    r13 =           10
+r14 =   1073926538,    r15 =           50
+r16 =            7,    r17 =   1073926928
+r18 =           50,    r19 =           64
+r20 =       655417,    r21 =           57
+r22 =       655360,    r23 =           19
+r24 =            0,    r25 =           11
+r26 =    537571584,    r27 =      1613334
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440384,    r31 =            0
+ 
+NUMBER OF CYCLES:                     630000
+NUMBER OF INSTRUCTIONS EXECUTED:      496652
+NUMBER OF INSTRUCTIONS COMMITTED:     489900
+NUMBER OF BRANCHES EXECUTED:          73645
+NUMBER OF BRANCHES COMMITTED:         72964
+IPC:                                  0.7776
+CPI:                                  1.2860
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 640000
+PC VALUE = 0x00000000200a6218
+r00 =   1074122832,    r01 =   1074122832
+r02 =           23,    r03 =   1074122832
+r04 =            0,    r05 =           24
+r06 =           10,    r07 =           14
+r08 =           52,    r09 =           52
+r10 =   1073956328,    r11 =           16
+r12 =   1074114360,    r13 =           10
+r14 =   1073926538,    r15 =           62
+r16 =            7,    r17 =   1073926928
+r18 =           62,    r19 =   1074126840
+r20 =            0,    r21 =           10
+r22 =            0,    r23 =   1073823152
+r24 =            0,    r25 =           11
+r26 =    537571584,    r27 =      1613334
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440384,    r31 =            0
+ 
+NUMBER OF CYCLES:                     640000
+NUMBER OF INSTRUCTIONS EXECUTED:      505231
+NUMBER OF INSTRUCTIONS COMMITTED:     498465
+NUMBER OF BRANCHES EXECUTED:          75222
+NUMBER OF BRANCHES COMMITTED:         74539
+IPC:                                  0.7789
+CPI:                                  1.2839
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 650000
+PC VALUE = 0x00000000201432d4
+r00 =           -1,    r01 =   1074122928
+r02 =           19,    r03 =       983092
+r04 =            0,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074122912,    r13 =           15
+r14 =   1073926543,    r15 =            7
+r16 =           18,    r17 =   1074122912
+r18 =       983092,    r19 =   1074126840
+r20 =       983097,    r21 =           57
+r22 =       983040,    r23 =           22
+r24 =            9,    r25 =           14
+r26 =           13,    r27 =           11
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     650000
+NUMBER OF INSTRUCTIONS EXECUTED:      514086
+NUMBER OF INSTRUCTIONS COMMITTED:     507178
+NUMBER OF BRANCHES EXECUTED:          77045
+NUMBER OF BRANCHES COMMITTED:         76341
+IPC:                                  0.7803
+CPI:                                  1.2816
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 660000
+PC VALUE = 0x000000002013df14
+r00 =            0,    r01 =   1074123120
+r02 =       983097,    r03 =           15
+r04 =           11,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114328,    r11 =    536440592
+r12 =   1074114328,    r13 =           15
+r14 =   1073991056,    r15 =   1074123104
+r16 =   1074114328,    r17 =            4
+r18 =       983097,    r19 =   1074126840
+r20 =       983097,    r21 =           57
+r22 =       983040,    r23 =           22
+r24 =            9,    r25 =           14
+r26 =    538200032,    r27 =           11
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440400,    r31 =            0
+ 
+NUMBER OF CYCLES:                     660000
+NUMBER OF INSTRUCTIONS EXECUTED:      522758
+NUMBER OF INSTRUCTIONS COMMITTED:     515816
+NUMBER OF BRANCHES EXECUTED:          78628
+NUMBER OF BRANCHES COMMITTED:         77924
+IPC:                                  0.7815
+CPI:                                  1.2795
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 670000
+PC VALUE = 0x00000000200aaffc
+r00 =        32768,    r01 =    536440472
+r02 =       983097,    r03 =           16
+r04 =           24,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =           15
+r14 =   1073926543,    r15 =           52
+r16 =    536440480,    r17 =           15
+r18 =           52,    r19 =   1074126840
+r20 =       983097,    r21 =           57
+r22 =       983040,    r23 =           22
+r24 =            0,    r25 =           14
+r26 =    537363400,    r27 =      1695254
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     670000
+NUMBER OF INSTRUCTIONS EXECUTED:      531464
+NUMBER OF INSTRUCTIONS COMMITTED:     524496
+NUMBER OF BRANCHES EXECUTED:          80219
+NUMBER OF BRANCHES COMMITTED:         79515
+IPC:                                  0.7828
+CPI:                                  1.2774
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 680000
+PC VALUE = 0x00000000200a6228
+r00 =   1074123504,    r01 =   1074123520
+r02 =           23,    r03 =   1074123504
+r04 =            0,    r05 =           24
+r06 =           10,    r07 =           20
+r08 =           52,    r09 =           52
+r10 =   1073956328,    r11 =           16
+r12 =   1074114360,    r13 =           16
+r14 =   1073926544,    r15 =           20
+r16 =            7,    r17 =   1073926928
+r18 =           20,    r19 =   1074126840
+r20 =      1048633,    r21 =           57
+r22 =      1048576,    r23 =            9
+r24 =            0,    r25 =           17
+r26 =    537571584,    r27 =      7986902
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440384,    r31 =            0
+ 
+NUMBER OF CYCLES:                     680000
+NUMBER OF INSTRUCTIONS EXECUTED:      540181
+NUMBER OF INSTRUCTIONS COMMITTED:     533188
+NUMBER OF BRANCHES EXECUTED:          81801
+NUMBER OF BRANCHES COMMITTED:         81097
+IPC:                                  0.7841
+CPI:                                  1.2753
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 690000
+PC VALUE = 0x00000000200783a4
+r00 =       131072,    r01 =   1074123680
+r02 =      1048633,    r03 =           20
+r04 =          -16,    r05 =            1
+r06 =            0,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =           17
+r14 =   1073926545,    r15 =           48
+r16 =           52,    r17 =           17
+r18 =      1114112,    r19 =   1074126840
+r20 =      1114169,    r21 =           57
+r22 =      1114112,    r23 =            8
+r24 =            0,    r25 =           17
+r26 =    537363640,    r27 =      1695254
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     690000
+NUMBER OF INSTRUCTIONS EXECUTED:      549165
+NUMBER OF INSTRUCTIONS COMMITTED:     542151
+NUMBER OF BRANCHES EXECUTED:          83424
+NUMBER OF BRANCHES COMMITTED:         82720
+IPC:                                  0.7857
+CPI:                                  1.2727
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 700000
+PC VALUE = 0x00000000201432d0
+r00 =           -1,    r01 =   1074123856
+r02 =           15,    r03 =      1245241
+r04 =            1,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074114344,    r13 =           19
+r14 =   1073926547,    r15 =           10
+r16 =           14,    r17 =   1074114344
+r18 =      1245241,    r19 =   1074126840
+r20 =      1245241,    r21 =           57
+r22 =      1245184,    r23 =           10
+r24 =           21,    r25 =           18
+r26 =           17,    r27 =           23
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     700000
+NUMBER OF INSTRUCTIONS EXECUTED:      558161
+NUMBER OF INSTRUCTIONS COMMITTED:     551141
+NUMBER OF BRANCHES EXECUTED:          85042
+NUMBER OF BRANCHES COMMITTED:         84338
+IPC:                                  0.7873
+CPI:                                  1.2701
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 710000
+PC VALUE = 0x000000002013df0c
+r00 =            0,    r01 =   1074124064
+r02 =      1245236,    r03 =           21
+r04 =           15,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074124048,    r11 =    536440592
+r12 =   1074124048,    r13 =           19
+r14 =   1073991056,    r15 =   1074114344
+r16 =   1074124048,    r17 =            4
+r18 =      1245236,    r19 =   1074126840
+r20 =      1245241,    r21 =           57
+r22 =      1245184,    r23 =           10
+r24 =           21,    r25 =           18
+r26 =    538200032,    r27 =           23
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440400,    r31 =            0
+ 
+NUMBER OF CYCLES:                     710000
+NUMBER OF INSTRUCTIONS EXECUTED:      566844
+NUMBER OF INSTRUCTIONS COMMITTED:     559824
+NUMBER OF BRANCHES EXECUTED:          86631
+NUMBER OF BRANCHES COMMITTED:         85927
+IPC:                                  0.7885
+CPI:                                  1.2683
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 720000
+PC VALUE = 0x00000000200783d8
+r00 =   1074124256,    r01 =   1074124272
+r02 =      1245236,    r03 =           52
+r04 =      1245184,    r05 =           24
+r06 =           52,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =   1074124256
+r12 =   1074114360,    r13 =           19
+r14 =   1073926547,    r15 =           37
+r16 =            7,    r17 =   1074114384
+r18 =           37,    r19 =   1074126840
+r20 =      1245241,    r21 =           57
+r22 =      1245184,    r23 =           10
+r24 =            0,    r25 =           18
+r26 =    537363400,    r27 =      1576470
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440528,    r31 =    537192968
+ 
+NUMBER OF CYCLES:                     720000
+NUMBER OF INSTRUCTIONS EXECUTED:      575527
+NUMBER OF INSTRUCTIONS COMMITTED:     568507
+NUMBER OF BRANCHES EXECUTED:          88221
+NUMBER OF BRANCHES COMMITTED:         87517
+IPC:                                  0.7896
+CPI:                                  1.2665
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 730000
+PC VALUE = 0x0000000020146f48
+r00 =           -1,    r01 =   1074124464
+r02 =           41,    r03 =            7
+r04 =           15,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =    536440592,    r11 =            1
+r12 =   1074114360,    r13 =           19
+r14 =   1073926547,    r15 =           49
+r16 =   1074114360,    r17 =   1074114384
+r18 =    536440592,    r19 =   1074126840
+r20 =      1245241,    r21 =           57
+r22 =      1245184,    r23 =           10
+r24 =           21,    r25 =           18
+r26 =    537363640,    r27 =           23
+r28 =    536912448,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     730000
+NUMBER OF INSTRUCTIONS EXECUTED:      584214
+NUMBER OF INSTRUCTIONS COMMITTED:     577194
+NUMBER OF BRANCHES EXECUTED:          89818
+NUMBER OF BRANCHES COMMITTED:         89114
+IPC:                                  0.7907
+CPI:                                  1.2647
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 740000
+PC VALUE = 0x0000000020141e2c
+r00 =           -1,    r01 =   1074124672
+r02 =           15,    r03 =            9
+r04 =            1,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074124656,    r13 =           19
+r14 =   1073926547,    r15 =           62
+r16 =           14,    r17 =   1074124656
+r18 =      1245236,    r19 =   1074126840
+r20 =      1245241,    r21 =           57
+r22 =      1245184,    r23 =           10
+r24 =           21,    r25 =           18
+r26 =    538213160,    r27 =           23
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     740000
+NUMBER OF INSTRUCTIONS EXECUTED:      592897
+NUMBER OF INSTRUCTIONS COMMITTED:     585877
+NUMBER OF BRANCHES EXECUTED:          91407
+NUMBER OF BRANCHES COMMITTED:         90703
+IPC:                                  0.7917
+CPI:                                  1.2631
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 750000
+PC VALUE = 0x00000000200ab004
+r00 =      1048576,    r01 =    536440472
+r02 =      1310777,    r03 =           16
+r04 =           24,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =           20
+r14 =   1073926548,    r15 =           12
+r16 =    536440480,    r17 =           20
+r18 =           12,    r19 =   1074126840
+r20 =      1310777,    r21 =           57
+r22 =      1310720,    r23 =           13
+r24 =            0,    r25 =           21
+r26 =    537363400,    r27 =      3710550
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     750000
+NUMBER OF INSTRUCTIONS EXECUTED:      601593
+NUMBER OF INSTRUCTIONS COMMITTED:     594566
+NUMBER OF BRANCHES EXECUTED:          93006
+NUMBER OF BRANCHES COMMITTED:         92301
+IPC:                                  0.7928
+CPI:                                  1.2614
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 760000
+PC VALUE = 0x00000000201425f8
+r00 =           -1,    r01 =   1074125072
+r02 =            8,    r03 =           14
+r04 =            1,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074114328,    r13 =           20
+r14 =   1073926548,    r15 =           10
+r16 =            9,    r17 =   1074114328
+r18 =      1310777,    r19 =   1074126840
+r20 =      1310777,    r21 =           57
+r22 =      1310720,    r23 =           13
+r24 =           18,    r25 =           21
+r26 =    538213160,    r27 =           16
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     760000
+NUMBER OF INSTRUCTIONS EXECUTED:      610270
+NUMBER OF INSTRUCTIONS COMMITTED:     603243
+NUMBER OF BRANCHES EXECUTED:          94593
+NUMBER OF BRANCHES COMMITTED:         93888
+IPC:                                  0.7937
+CPI:                                  1.2599
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 770000
+PC VALUE = 0x0000000020142de8
+r00 =   1074125264,    r01 =   1074125280
+r02 =            8,    r03 =      1310777
+r04 =           16,    r05 =            1
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114384,    r11 =    536440592
+r12 =   1074125264,    r13 =           20
+r14 =   1073991056,    r15 =   1074114328
+r16 =            9,    r17 =   1074125264
+r18 =      1310772,    r19 =   1074126840
+r20 =      1310777,    r21 =           57
+r22 =      1310720,    r23 =           13
+r24 =           18,    r25 =           21
+r26 =           22,    r27 =           16
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     770000
+NUMBER OF INSTRUCTIONS EXECUTED:      618949
+NUMBER OF INSTRUCTIONS COMMITTED:     611922
+NUMBER OF BRANCHES EXECUTED:          96182
+NUMBER OF BRANCHES COMMITTED:         95477
+IPC:                                  0.7947
+CPI:                                  1.2583
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 780000
+PC VALUE = 0x0000000020144890
+r00 =           -1,    r01 =   1074125472
+r02 =      1310777,    r03 =           16
+r04 =           16,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114360
+r10 =   1074114344,    r11 =    536440592
+r12 =   1074114344,    r13 =           20
+r14 =   1073991056,    r15 =   1074125456
+r16 =   1074114344,    r17 =            4
+r18 =      1310777,    r19 =   1074126840
+r20 =      1310777,    r21 =           57
+r22 =      1310720,    r23 =           13
+r24 =           18,    r25 =           21
+r26 =    538213160,    r27 =           16
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     780000
+NUMBER OF INSTRUCTIONS EXECUTED:      627648
+NUMBER OF INSTRUCTIONS COMMITTED:     620621
+NUMBER OF BRANCHES EXECUTED:          97786
+NUMBER OF BRANCHES COMMITTED:         97081
+IPC:                                  0.7957
+CPI:                                  1.2568
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 790000
+PC VALUE = 0x0000000020146f24
+r00 =           -1,    r01 =   1074125680
+r02 =      1310772,    r03 =           16
+r04 =           16,    r05 =            7
+r06 =            7,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =   1074125664
+r12 =   1074114360,    r13 =           20
+r14 =   1073926548,    r15 =           62
+r16 =   1074114360,    r17 =   1074114384
+r18 =    536440592,    r19 =   1074126840
+r20 =      1310777,    r21 =           57
+r22 =      1310720,    r23 =           13
+r24 =           18,    r25 =           21
+r26 =    537363568,    r27 =           16
+r28 =    536912448,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     790000
+NUMBER OF INSTRUCTIONS EXECUTED:      636326
+NUMBER OF INSTRUCTIONS COMMITTED:     629299
+NUMBER OF BRANCHES EXECUTED:          99373
+NUMBER OF BRANCHES COMMITTED:         98668
+IPC:                                  0.7966
+CPI:                                  1.2554
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 800000
+PC VALUE = 0x0000000020147bec
+r00 =           -1,    r01 =   1074125872
+r02 =      1376313,    r03 =           17
+r04 =           17,    r05 =           10
+r06 =           10,    r07 =            0
+r08 =           52,    r09 =   1074114328
+r10 =   1074114344,    r11 =   1074125856
+r12 =   1074114360,    r13 =           21
+r14 =   1073926549,    r15 =           22
+r16 =   1074114328,    r17 =            4
+r18 =      1376313,    r19 =   1074126840
+r20 =      1376313,    r21 =           57
+r22 =      1376256,    r23 =           12
+r24 =           19,    r25 =           20
+r26 =    537363568,    r27 =           17
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     800000
+NUMBER OF INSTRUCTIONS EXECUTED:      645030
+NUMBER OF INSTRUCTIONS COMMITTED:     637908
+NUMBER OF BRANCHES EXECUTED:          100961
+NUMBER OF BRANCHES COMMITTED:         100244
+IPC:                                  0.7974
+CPI:                                  1.2541
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 810000
+PC VALUE = 0x00000000200ab114
+r00 =   1074126048,    r01 =   1074126064
+r02 =      1441844,    r03 =           52
+r04 =      1441792,    r05 =           24
+r06 =           52,    r07 =            0
+r08 =           52,    r09 =           22
+r10 =           24,    r11 =            1
+r12 =   1074114360,    r13 =           22
+r14 =   1073926550,    r15 =           24
+r16 =            7,    r17 =   1073926928
+r18 =           24,    r19 =   1074126840
+r20 =      1441849,    r21 =           57
+r22 =      1441792,    r23 =           15
+r24 =            0,    r25 =           23
+r26 =    537571584,    r27 =      7986902
+r28 =    538193332,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     810000
+NUMBER OF INSTRUCTIONS EXECUTED:      653900
+NUMBER OF INSTRUCTIONS COMMITTED:     646723
+NUMBER OF BRANCHES EXECUTED:          102559
+NUMBER OF BRANCHES COMMITTED:         101837
+IPC:                                  0.7984
+CPI:                                  1.2525
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 820000
+PC VALUE = 0x0000000020078374
+r00 =            0,    r01 =   1074126128
+r02 =      1835065,    r03 =           24
+r04 =           -4,    r05 =           10
+r06 =           10,    r07 =          121
+r08 =            0,    r09 =   1074114328
+r10 =   1074114344,    r11 =            1
+r12 =   1074114360,    r13 =           28
+r14 =   1073926556,    r15 =           60
+r16 =           52,    r17 =           28
+r18 =      1835065,    r19 =   1074126840
+r20 =      1835065,    r21 =           57
+r22 =      1835008,    r23 =            5
+r24 =            0,    r25 =           29
+r26 =    537363640,    r27 =      1576470
+r28 =    538213148,    r29 =   1073861392
+r30 =    536440528,    r31 =            0
+ 
+NUMBER OF CYCLES:                     820000
+NUMBER OF INSTRUCTIONS EXECUTED:      663699
+NUMBER OF INSTRUCTIONS COMMITTED:     656484
+NUMBER OF BRANCHES EXECUTED:          104239
+NUMBER OF BRANCHES COMMITTED:         103513
+IPC:                                  0.8006
+CPI:                                  1.2491
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 830000
+PC VALUE = 0x00000000200a61d4
+r00 =           65,    r01 =   1073926928
+r02 =            2,    r03 =   1074126568
+r04 =           24,    r05 =           24
+r06 =           52,    r07 =            0
+r08 =   1073926928,    r09 =           65
+r10 =   1073956328,    r11 =            0
+r12 =            0,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            7,    r17 =            4
+r18 =   1074033344,    r19 =   1074126552
+r20 =            6,    r21 =           32
+r22 =   1074022632,    r23 =   1074126536
+r24 =            0,    r25 =         4096
+r26 =    537571640,    r27 =    538333576
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440448,    r31 =            0
+ 
+NUMBER OF CYCLES:                     830000
+NUMBER OF INSTRUCTIONS EXECUTED:      671070
+NUMBER OF INSTRUCTIONS COMMITTED:     663708
+NUMBER OF BRANCHES EXECUTED:          105374
+NUMBER OF BRANCHES COMMITTED:         104628
+IPC:                                  0.7996
+CPI:                                  1.2505
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 840000
+PC VALUE = 0x00000000200ab178
+r00 =   1074131456,    r01 =   1074131480
+r02 =       262209,    r03 =           65
+r04 =       262144,    r05 =           65
+r06 =           65,    r07 =   1073796256
+r08 =   1073957280,    r09 =   1073957540
+r10 =   1074131456,    r11 =   1073889528
+r12 =            0,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            2,    r17 =            4
+r18 =   1074033344,    r19 =   1074131440
+r20 =            6,    r21 =           32
+r22 =   1074022632,    r23 =   1074131424
+r24 =            0,    r25 =         4096
+r26 =    537571640,    r27 =    538333576
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     840000
+NUMBER OF INSTRUCTIONS EXECUTED:      679513
+NUMBER OF INSTRUCTIONS COMMITTED:     672010
+NUMBER OF BRANCHES EXECUTED:          106637
+NUMBER OF BRANCHES COMMITTED:         105877
+IPC:                                  0.8000
+CPI:                                  1.2500
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 850000
+PC VALUE = 0x00000000200ab18c
+r00 =            1,    r01 =   1074132272
+r02 =       262209,    r03 =           65
+r04 =       262144,    r05 =           65
+r06 =           65,    r07 =   1073796256
+r08 =   1073957280,    r09 =   1073957540
+r10 =   1074132248,    r11 =   1073889530
+r12 =            1,    r13 =   1074033344
+r14 =   1073907264,    r15 =   1073926928
+r16 =            2,    r17 =            0
+r18 =   1073889530,    r19 =            0
+r20 =            6,    r21 =           24
+r22 =   1074132224,    r23 =   1074132248
+r24 =            0,    r25 =         4096
+r26 =            1,    r27 =    538333576
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     850000
+NUMBER OF INSTRUCTIONS EXECUTED:      687938
+NUMBER OF INSTRUCTIONS COMMITTED:     680298
+NUMBER OF BRANCHES EXECUTED:          107885
+NUMBER OF BRANCHES COMMITTED:         107113
+IPC:                                  0.8004
+CPI:                                  1.2495
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 860000
+PC VALUE = 0x00000000200ab160
+r00 =   1074133040,    r01 =   1074133064
+r02 =       262209,    r03 =           65
+r04 =       262144,    r05 =           65
+r06 =           65,    r07 =   1073795856
+r08 =   1073926928,    r09 =            4
+r10 =   1074133040,    r11 =            0
+r12 =            0,    r13 =            7
+r14 =   1073907264,    r15 =   1073926928
+r16 =            7,    r17 =            4
+r18 =   1074033344,    r19 =   1074133024
+r20 =            6,    r21 =           32
+r22 =   1074022632,    r23 =   1074133008
+r24 =            0,    r25 =         4096
+r26 =    537571640,    r27 =    538333576
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     860000
+NUMBER OF INSTRUCTIONS EXECUTED:      696325
+NUMBER OF INSTRUCTIONS COMMITTED:     688568
+NUMBER OF BRANCHES EXECUTED:          109119
+NUMBER OF BRANCHES COMMITTED:         108345
+IPC:                                  0.8007
+CPI:                                  1.2490
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 870000
+PC VALUE = 0x00000000200ab2b0
+r00 =            1,    r01 =   1074133856
+r02 =       262209,    r03 =           65
+r04 =       262144,    r05 =           65
+r06 =           65,    r07 =   1073796256
+r08 =   1073957280,    r09 =   1073957540
+r10 =   1074133832,    r11 =   1073889529
+r12 =            1,    r13 =   1074033344
+r14 =   1073907264,    r15 =   1073926928
+r16 =            2,    r17 =            0
+r18 =   1073889529,    r19 =            0
+r20 =            6,    r21 =           24
+r22 =   1074133808,    r23 =   1074133832
+r24 =            0,    r25 =         4096
+r26 =            1,    r27 =    538333576
+r28 =    537571944,    r29 =   1073861392
+r30 =    536440416,    r31 =            0
+ 
+NUMBER OF CYCLES:                     870000
+NUMBER OF INSTRUCTIONS EXECUTED:      704728
+NUMBER OF INSTRUCTIONS COMMITTED:     696858
+NUMBER OF BRANCHES EXECUTED:          110355
+NUMBER OF BRANCHES COMMITTED:         109581
+IPC:                                  0.8010
+CPI:                                  1.2485
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 880000
+PC VALUE = 0x0000000020161b7c
+r00 =            1,    r01 =   1073926928
+r02 =            0,    r03 =            1
+r04 =            1,    r05 =            0
+r06 =   1073997224,    r07 =   1074139112
+r08 =         4072,    r09 =   1073822224
+r10 =            0,    r11 =   1073824928
+r12 =            0,    r13 =            0
+r14 =         -513,    r15 =            0
+r16 =            0,    r17 =   1074164744
+r18 =    536440344,    r19 =           -1
+r20 =            0,    r21 =           10
+r22 =            0,    r23 =   1073823152
+r24 =            0,    r25 =         4096
+r26 =    538319320,    r27 =    538365704
+r28 =    538402096,    r29 =   1073861392
+r30 =    536440480,    r31 =            0
+ 
+NUMBER OF CYCLES:                     880000
+NUMBER OF INSTRUCTIONS EXECUTED:      711589
+NUMBER OF INSTRUCTIONS COMMITTED:     703600
+NUMBER OF BRANCHES EXECUTED:          111404
+NUMBER OF BRANCHES COMMITTED:         110617
+IPC:                                  0.7995
+CPI:                                  1.2507
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 890000
+PC VALUE = 0x000000002004f37c
+r00 =   1074080224,    r01 =   1073926928
+r02 =   1073823344,    r03 =   1073902104
+r04 =            7,    r05 =   1073953916
+r06 =         8192,    r07 =           99
+r08 =            5,    r09 =            4
+r10 =   1073906040,    r11 =   1073884528
+r12 =   1073907280,    r13 =   1073884584
+r14 =   1073907112,    r15 =   1073906176
+r16 =   1073827328,    r17 =            0
+r18 =      2097152,    r19 =            0
+r20 =   1073891935,    r21 =           -1
+r22 =           -1,    r23 =            0
+r24 =    536438637,    r25 =            0
+r26 =    537195392,    r27 =    538325360
+r28 =    538380736,    r29 =   1073861392
+r30 =    536440624,    r31 =            0
+ 
+NUMBER OF CYCLES:                     890000
+NUMBER OF INSTRUCTIONS EXECUTED:      715134
+NUMBER OF INSTRUCTIONS COMMITTED:     706996
+NUMBER OF BRANCHES EXECUTED:          112006
+NUMBER OF BRANCHES COMMITTED:         111192
+IPC:                                  0.7944
+CPI:                                  1.2588
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 900000
+PC VALUE = 0x0000000020167b70
+r00 =            6,    r01 =           -1
+r02 =            1,    r03 =     33554432
+r04 =     16777216,    r05 =   1073795856
+r06 =            1,    r07 =      2097152
+r08 =     33554432,    r09 =   1073822224
+r10 =   1073824928,    r11 =   1073824560
+r12 =            0,    r13 =   1073884584
+r14 =            0,    r15 =   1073926928
+r16 =            0,    r17 =    536440528
+r18 =            1,    r19 =            0
+r20 =            0,    r21 =      1048576
+r22 =      3145728,    r23 =      1048576
+r24 =    536438637,    r25 =            0
+r26 =    538344288,    r27 =    538411168
+r28 =    537029044,    r29 =   1073861392
+r30 =    536440544,    r31 =    538344308
+ 
+NUMBER OF CYCLES:                     900000
+NUMBER OF INSTRUCTIONS EXECUTED:      719048
+NUMBER OF INSTRUCTIONS COMMITTED:     710803
+NUMBER OF BRANCHES EXECUTED:          112972
+NUMBER OF BRANCHES COMMITTED:         112138
+IPC:                                  0.7898
+CPI:                                  1.2662
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 910000
+PC VALUE = 0x0000000020171928
+r00 =    536439972,    r01 =            1
+r02 =            0,    r03 =    536438669
+r04 =    808464432,    r05 =            0
+r06 =            0,    r07 =    808464432
+r08 =            5,    r09 =   1073776667
+r10 =   1073822336,    r11 =           21
+r12 =    536439600,    r13 =            1
+r14 =    536439599,    r15 =           -1
+r16 =            6,    r17 =    536439599
+r18 =            1,    r19 =    536439973
+r20 =    536439600,    r21 =           48
+r22 =    536438595,    r23 =    808464432
+r24 =    805306368,    r25 =           20
+r26 =    538383248,    r27 =            1
+r28 =    536924944,    r29 =   1073861392
+r30 =    536438576,    r31 =            0
+ 
+NUMBER OF CYCLES:                     910000
+NUMBER OF INSTRUCTIONS EXECUTED:      725843
+NUMBER OF INSTRUCTIONS COMMITTED:     717343
+NUMBER OF BRANCHES EXECUTED:          114109
+NUMBER OF BRANCHES COMMITTED:         113251
+IPC:                                  0.7883
+CPI:                                  1.2686
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 920000
+PC VALUE = 0x0000000020170ec8
+r00 =    808452096,    r01 =            6
+r02 =            0,    r03 =            0
+r04 =            0,    r05 =    536953764
+r06 =    536924944,    r07 =   1889785611
+r08 =            0,    r09 =   1073776667
+r10 =   1073822336,    r11 =          128
+r12 =    536439600,    r13 =            3
+r14 =    536439599,    r15 =          100
+r16 =    536439599,    r17 =           29
+r18 =            5,    r19 =           24
+r20 =         -489,    r21 =           48
+r22 =    536438599,    r23 =    979595116
+r24 =            0,    r25 =           24
+r26 =            0,    r27 =            1
+r28 =    536924944,    r29 =   1073861392
+r30 =    536438576,    r31 =            0
+ 
+NUMBER OF CYCLES:                     920000
+NUMBER OF INSTRUCTIONS EXECUTED:      735080
+NUMBER OF INSTRUCTIONS COMMITTED:     726304
+NUMBER OF BRANCHES EXECUTED:          115658
+NUMBER OF BRANCHES COMMITTED:         114772
+IPC:                                  0.7895
+CPI:                                  1.2667
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
+THIS IS THE REGISTER FILE FOR WITH INJECTION AT CYCLE 930000
+PC VALUE = 0x000000002016ed88
+r00 =    536439968,    r01 =    174339632
+r02 =    174339632,    r03 =   1073776666
+r04 =            0,    r05 =           22
+r06 =           16,    r07 =            1
+r08 =    807418471,    r09 =            1
+r10 =   1073822336,    r11 =          128
+r12 =    536439600,    r13 =   1073776665
+r14 =   1073776662,    r15 =           37
+r16 =           54,    r17 =            0
+r18 =          128,    r19 =    536439969
+r20 =   1073776663,    r21 =            0
+r22 =            0,    r23 =            0
+r24 =    536438669,    r25 =            0
+r26 =    538372448,    r27 =            0
+r28 =    538373592,    r29 =   1073861392
+r30 =    536438576,    r31 =            0
+ 
+NUMBER OF CYCLES:                     930000
+NUMBER OF INSTRUCTIONS EXECUTED:      744238
+NUMBER OF INSTRUCTIONS COMMITTED:     735174
+NUMBER OF BRANCHES EXECUTED:          117206
+NUMBER OF BRANCHES COMMITTED:         116290
+IPC:                                  0.7905
+CPI:                                  1.2650
+NUMBER OF FLIPS:                      29307
+PERCENT OF FLIPS THAT'S IN DECODER:   0.0000
+PERCENT OF FLIPS THAT'S IN RAND-REG:  1.0000
+PERCENT OF FLIPS THAT'S IN DEST-VAL:  0.0000
+NUMBER OF DECODE FLIPS -> BOGUS INST: 0
+NUMBER OF NON-SPEC FAULTS:            0
+NUMBER OF $r31 FLIPS:                 0
+---------------------------------------------------------------------
