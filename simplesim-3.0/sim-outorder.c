@@ -4627,7 +4627,7 @@ simoo_mstate_obj(FILE *stream,			/* output stream */
 void
 sim_main(void)
 {
-  char filename_ni[50], filename_wi[50], header_filename[200], final_filename[200];
+  char filename_ni[200], filename_wi[50], header_filename[300], final_filename[300];
   strcpy(filename_ni, "no_injection");
   strcpy(filename_wi, "with_injection");
   //time_t current_time;
@@ -4646,12 +4646,12 @@ sim_main(void)
   strcpy(header_filename,header_str);
   strcat(header_filename,filename_wi);
   printf("buffer filename before loop = %s\n",header_filename);
-  char file_count_str[10];
+  char file_count_str[50];
   int file_count = 0;
   for (;;){
     char buffer_filename[200];
     strcpy(buffer_filename,header_filename);
-    snprintf(file_count_str, sizeof file_count_str, "_%04d.txt", file_count);\
+    snprintf(file_count_str, sizeof file_count_str, "_%04d-ruu%2d.txt", file_count, RUU_size);\
     strcat(buffer_filename,file_count_str);
     if (file_exist(buffer_filename)){
       file_count++;
